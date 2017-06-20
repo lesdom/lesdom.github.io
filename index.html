@@ -135,6 +135,220 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Emmet语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/20/Emmet语法/">Emmet语法</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/20/Emmet语法/" class="archive-article-date">
+  	<time datetime="2017-06-20T12:26:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><p>一般编辑器都支持emmet插件的，使用的快捷键是<code>Tab</code></p>
+<h3 id="元素"><a href="#元素" class="headerlink" title="元素"></a>元素</h3><p>Emmet 没有预定义标签集合，所以可以用任意单词来生成对应的标签：</p>
+<pre><code>div → &lt;div&gt;&lt;/div&gt;, foo → &lt;foo&gt;&lt;/foo&gt;
+</code></pre><h3 id="嵌套操作符"><a href="#嵌套操作符" class="headerlink" title="嵌套操作符"></a>嵌套操作符</h3><table>
+<thead>
+<tr>
+<th>说明</th>
+<th>符号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>子元素</td>
+<td>&gt;</td>
+</tr>
+<tr>
+<td>兄弟元素</td>
+<td>+</td>
+</tr>
+<tr>
+<td>返回上层</td>
+<td>^</td>
+</tr>
+<tr>
+<td>乘法</td>
+<td>*</td>
+</tr>
+<tr>
+<td>分组</td>
+<td>()</td>
+</tr>
+</tbody>
+</table>
+<h3 id="属性操作符"><a href="#属性操作符" class="headerlink" title="属性操作符"></a>属性操作符</h3><table>
+<thead>
+<tr>
+<th>说明</th>
+<th>符号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>#</td>
+</tr>
+<tr>
+<td>类</td>
+<td>.</td>
+</tr>
+<tr>
+<td>自定义属性</td>
+<td>[name=value]</td>
+</tr>
+<tr>
+<td>编号</td>
+<td>$</td>
+</tr>
+<tr>
+<td>降序</td>
+<td>@-</td>
+</tr>
+<tr>
+<td>改变起点</td>
+<td>@N</td>
+</tr>
+<tr>
+<td>文本</td>
+<td>{}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>输入<code>ul#nav&gt;li.item$*4&gt;a{item $}</code>按下<code>Tab</code>生成</p>
+<pre><code>&lt;ul id=&quot;nav&quot;&gt;
+    &lt;li class=&quot;item1&quot;&gt;&lt;a href=&quot;&quot;&gt;item 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;item2&quot;&gt;&lt;a href=&quot;&quot;&gt;item 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;item3&quot;&gt;&lt;a href=&quot;&quot;&gt;item 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;item4&quot;&gt;&lt;a href=&quot;&quot;&gt;item 4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><h3 id="假文"><a href="#假文" class="headerlink" title="假文"></a>假文</h3><p>输入<code>p&gt;lorem</code>生成</p>
+<pre><code>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quo esse voluptatibus accusantium dicta. Distinctio, veniam, iste. Nesciunt tenetur ad repellendus ducimus pariatur excepturi, vero at recusandae, adipisci porro error.&lt;/p&gt;
+</code></pre><p>可以指定字数，比如输入<code>p&gt;lorem10</code>生成10 字数的假文</p>
+<pre><code>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, facilis.&lt;/p&gt;
+</code></pre><h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h3 id="宽高"><a href="#宽高" class="headerlink" title="宽高"></a>宽高</h3><pre><code>width: ;      w
+height: ;     h
+max-width: ;  maw
+max-height: ; mah
+min-width: ;  miw
+min-height: ; mih
+</code></pre><h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><pre><code>font-size: ;         fz
+font-weight: ;       fw
+font-weight: normal; fw:n
+font-weight: bold;   fw:b
+</code></pre><h3 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h3><pre><code>color: #000;              c
+color: rgb(0, 0, 0);      c:r
+color: rgba(0, 0, 0, .5); c:ra
+opacity: ;                op
+</code></pre><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><pre><code>background-color: #fff;  bgc
+</code></pre><h3 id="边线"><a href="#边线" class="headerlink" title="边线"></a>边线</h3><pre><code>border: ;               bd
+border: 1px solid #000; bd+
+border: none;           bd:n
+
+border-top: ;     bt
+border-bottom: ;  bb
+border-left: ;    bl
+border-right: ;   br
+</code></pre><h3 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h3><pre><code>text-align: left;    ta
+text-align: center;  ta:c
+text-align: left;    ta:l
+text-align: right;   ta:r
+text-align: justify; ta:j
+
+text-indent: ;           ti
+vertical-align: middle;  va:m
+</code></pre><h3 id="内外间距"><a href="#内外间距" class="headerlink" title="内外间距"></a>内外间距</h3><pre><code>margin: ;         m
+margin: auto;     m:a
+margin-top: ;     mt
+margin-bottom: ;  mb
+margin-left: ;    ml
+margin-right: ;   mr
+
+padding: ;        p
+padding-top: ;    pt
+padding-bottom: ; pb
+padding-left: ;   pl
+padding-right: ;  pr
+</code></pre><h3 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h3><pre><code>position: relative; pos
+position: absolute; pos:a
+position: relative; pos:r
+position: fixed;    pos:f
+
+top: ;     t
+bottom: ;  b
+left: ;    l
+right: ;   r
+z-index: ; z
+
+float: left;  fl
+float: none;  fl:n
+float: left;  fl:l
+float: right; fl:r
+
+clear: both;  cl
+clear: none;  cl:n
+clear: left;  cl:l
+clear: right; cl:r
+clear: both;  cl:b
+
+display: block;         d
+display: none;          d:n
+display: block;         d:b
+display: inline;        d:i
+display: inline-block;  d:ib
+
+overflow: hidden; oh
+</code></pre><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://yanxyz.github.io/emmet-docs/" target="_blank" rel="external">Emmet 中文文档</a></p>
+<p><a href="http://yanxyz.github.io/emmet-docs/cheat-sheet/" target="_blank" rel="external">Emmet cheatsheet</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/20/Emmet语法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-Windows操作配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -668,6 +882,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">互联网</a>
