@@ -152,8 +152,20 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><p>常用的标签就是<code>div</code>和<code>span</code>，配合使用<code>display</code>、<code>position</code>、<code>float</code>进行布局。</p>
-<h2 id="分布"><a href="#分布" class="headerlink" title="分布"></a>分布</h2><h3 id="左右"><a href="#左右" class="headerlink" title="左右"></a>左右</h3><p>设置好宽度，使用<code>float</code>、<code>margin</code>、<code>padding</code>实现左右分布</p>
-<h3 id="上下"><a href="#上下" class="headerlink" title="上下"></a>上下</h3><p>使用<code>display:block</code>，让元素单独占据一行<br></p>
+<h3 id="display"><a href="#display" class="headerlink" title="display"></a>display</h3><p><strong>block</strong>(块状元素)</p>
+<p>总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示；<br>宽度(width)、高度(height)、内边距(padding)和外边距(margin)都可控制。</p>
+<pre><code>HTML5：header、footer、section、article、aside、canvas、
+       audio、vedio、output
+HTML： h1-h6、div、p、blockquote、form、table、ul、ol、dl、li、
+       pre、hr、address、noscript
+</code></pre><p><strong>inline</strong>(内联元素)</p>
+<p>和相邻的内联元素在同一行；<br>宽度(width)、高度(height)、内边距的top/bottom(padding-top/padding-bottom)和外边距的top/bottom(margin-top/margin-bottom)都不可改变</p>
+<pre><code>a、img、big、small、span、em、strong、b、i、site、code、
+sub、sup、abbr、select、input、br、q、label、textarea
+</code></pre><p><strong>inline-block</strong>(内联块状元素)</p>
+<p>同行显示并可修改宽高内外边距等属性</p>
+<p><strong>none</strong></p>
+<p>不删除元素的情况下隐藏元素，与 visibility 属性的区别：把 display 设置成 none 元素不会占据它本来应该显示的空间，但是设置成 visibility: hidden; 还会占据空间。</p>
         
           <a class="article-more-a" href="/2017/06/28/布局总结/#more">more >></a>
         
@@ -873,11 +885,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">互联网</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color4">互联网</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -885,11 +897,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
