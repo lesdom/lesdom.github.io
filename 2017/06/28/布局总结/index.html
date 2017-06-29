@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yearslater.me/2017/06/28/布局总结/index.html">
 <meta property="og:site_name" content="Years">
 <meta property="og:description" content="基本常用的标签就是div和span，配合使用display、position、float进行布局。 displayblock(块状元素) 总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示；宽度(width)、高度(height)、内边距(padding)和外边距(margin)都可控制。 HTML5：header、footer、section、article、aside、canv">
-<meta property="og:updated_time" content="2017-06-28T14:43:51.384Z">
+<meta property="og:updated_time" content="2017-06-28T14:56:40.378Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="布局总结">
 <meta name="twitter:description" content="基本常用的标签就是div和span，配合使用display、position、float进行布局。 displayblock(块状元素) 总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示；宽度(width)、高度(height)、内边距(padding)和外边距(margin)都可控制。 HTML5：header、footer、section、article、aside、canv">
@@ -161,7 +161,8 @@
        audio、vedio、output
 HTML： h1-h6、div、p、blockquote、form、table、ul、ol、dl、li、
        pre、hr、address、noscript
-</code></pre><p><strong>inline</strong>(内联元素)</p>
+</code></pre><a id="more"></a>
+<p><strong>inline</strong>(内联元素)</p>
 <p>和相邻的内联元素在同一行；<br>宽度(width)、高度(height)、内边距的top/bottom(padding-top/padding-bottom)和外边距的top/bottom(margin-top/margin-bottom)都不可改变</p>
 <pre><code>a、img、big、small、span、em、strong、b、i、site、code、
 sub、sup、abbr、select、input、br、q、label、textarea
@@ -169,16 +170,18 @@ sub、sup、abbr、select、input、br、q、label、textarea
 <p>同行显示并可修改宽高内外边距等属性</p>
 <p><strong>none</strong></p>
 <p>不删除元素的情况下隐藏元素，与 visibility 属性的区别：把 display 设置成 none 元素不会占据它本来应该显示的空间，但是设置成 visibility: hidden; 还会占据空间。</p>
-<a id="more"></a>
 <h3 id="position"><a href="#position" class="headerlink" title="position"></a>position</h3><p><strong>static</strong></p>
-<p>static是默认值，没有定位。</p>
-<p><strong>relative</strong></p>
-<p>relative是相对定位，设置top、right、bottom和left属性会使其偏离其正常位置，通常用作absolute的父元素辅助定位。</p>
-<p><strong>absolute</strong></p>
-<p>absolute是绝对定位，相对于最近的“positioned”祖先元素进行定位，通过top、right、bottom和left属性进行规定。</p>
-<p><strong>fixed</strong></p>
-<p>fixed是绝对定位，相对于浏览器视窗来定位，随着页面滚动，停留在相同位置，通过top、right、bottom和left属性进行规定。</p>
-<h3 id="float"><a href="#float" class="headerlink" title="float"></a>float</h3><h4 id="清楚浮动"><a href="#清楚浮动" class="headerlink" title="清楚浮动"></a>清楚浮动</h4><p>1、在需要清除浮动的元素上</p>
+<pre><code>static是默认值，没有定位。
+</code></pre><p><strong>relative</strong></p>
+<pre><code>relative是相对定位，通常用作absolute的父元素辅助定位，
+设置top、right、bottom和left属性会使其偏离其正常位置。
+</code></pre><p><strong>absolute</strong></p>
+<pre><code>absolute是绝对定位，相对于最近的“positioned”祖先元素进行定位，
+通过top、right、bottom和left属性进行规定。
+</code></pre><p><strong>fixed</strong></p>
+<pre><code>fixed是绝对定位，相对于浏览器视窗来定位，随着页面滚动，停留在相同位置，
+通过top、right、bottom和left属性进行规定。
+</code></pre><h3 id="float"><a href="#float" class="headerlink" title="float"></a>float</h3><h4 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h4><p>1、在需要清除浮动的元素上</p>
 <pre><code>clear:both;
 </code></pre><p>2、父元素</p>
 <p>1&gt;</p>
@@ -356,6 +359,15 @@ margin:auto;
   
 <nav id="article-nav">
   
+    <a href="/2017/06/29/CSS选择器/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CSS选择器
+        
+      </div>
+    </a>
+  
   
     <a href="/2017/06/23/word总结/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">word总结</div>
@@ -462,7 +474,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -470,7 +482,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -478,7 +490,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
               </li>
              
               <li class="article-tag-list-item">

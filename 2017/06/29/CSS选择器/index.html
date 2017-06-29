@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yearslater.me">
-  <title>Tag: 互联网 | Years</title>
+  <title>CSS选择器 | Years</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Years">
-<meta property="og:url" content="http://yearslater.me/tags/互联网/index.html">
+  <meta name="description" content="优先级不同级别： 1 在属性后面使用 !important 会覆盖页面内任何位置定义的元素样式。 2 作为style属性写在元素内的样式 3 id选择器 4 类选择器 5 标签选择器 6 通配符选择器 7 浏览器自定义 同一级别： 同一级别中后写的会覆盖先写的样式">
+<meta name="keywords" content="CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS选择器">
+<meta property="og:url" content="http://yearslater.me/2017/06/29/CSS选择器/index.html">
 <meta property="og:site_name" content="Years">
+<meta property="og:description" content="优先级不同级别： 1 在属性后面使用 !important 会覆盖页面内任何位置定义的元素样式。 2 作为style属性写在元素内的样式 3 id选择器 4 类选择器 5 标签选择器 6 通配符选择器 7 浏览器自定义 同一级别： 同一级别中后写的会覆盖先写的样式">
+<meta property="og:updated_time" content="2017-06-29T03:06:29.800Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Years">
+<meta name="twitter:title" content="CSS选择器">
+<meta name="twitter:description" content="优先级不同级别： 1 在属性后面使用 !important 会覆盖页面内任何位置定义的元素样式。 2 作为style属性写在元素内的样式 3 id选择器 4 类选择器 5 标签选择器 6 通配符选择器 7 浏览器自定义 同一级别： 同一级别中后写的会覆盖先写的样式">
   
     <link rel="alternative" href="/atom.xml" title="Years" type="application/atom+xml">
   
@@ -129,174 +134,186 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CSS选择器" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS选择器
+    </h1>
+  
+
+        
+        <a href="/2017/06/29/CSS选择器/" class="archive-article-date">
+  	<time datetime="2017-06-29T01:51:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-29</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2><p>不同级别：</p>
+<pre><code>1 在属性后面使用 !important 会覆盖页面内任何位置定义的元素样式。
+2 作为style属性写在元素内的样式
+3 id选择器
+4 类选择器
+5 标签选择器
+6 通配符选择器
+7 浏览器自定义
+</code></pre><p>同一级别：</p>
+<pre><code>同一级别中后写的会覆盖先写的样式
+</code></pre><a id="more"></a>
+<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><p><strong>1、基础选择器</strong></p>
+<pre><code>*        通用元素选择器，匹配页面任何元素
+\#id        id选择器，匹配特定id的元素
+.class    类选择器，匹配class包含(不是等于)特定类的元素
+element    标签选择器
+</code></pre><p><strong>2、组合选择器</strong></p>
+<pre><code>E,F    多元素选择器，用”,”分隔，同时匹配元素E或元素F
+E F    后代选择器，用空格分隔，匹配E元素所有的后代元素F
+    （不只是子元素、子元素向下递归）
+E&gt;F    子元素选择器，用”&gt;”分隔，匹配E元素的所有直接子元素
+E+F    直接相邻选择器，匹配E元素之后的相邻的同级元素F
+E~F    普通相邻选择器（弟弟选择器），匹配E元素之后的同级元素F
+    （无论直接相邻与否）
+
+.class1.class2    匹配类名中既包含class1又包含class2的元素
+</code></pre><p><strong>3、属性选择器</strong></p>
+<pre><code>E[attr]            匹配所有具有属性attr的元素，
+                div[id]就能取到所有有id属性的div
+E[attr=value]    匹配属性attr值为value的元素，
+                div[id=test],匹配id=test的div
+E[attr~=value]    匹配所有属性attr具有多个空格分隔、其中一个值等于value的元素
+E[attr|=value]    匹配所有att属性具有多个”-”分隔、其中一个值以value开头的
+                元素，主要用于lang属性，比如“en”、“en-us”
+E[attr^=value]    匹配属性attr的值以value开头的元素
+E[attr$=value]    匹配属性attr的值以value结尾的元素
+E[attr*=value]    匹配属性attr的值包含value的元素
+</code></pre><p><strong>4、伪类选择器</strong></p>
+<pre><code>E:link       匹配所有未被点击的链接
+E:visited  匹配所有已被点击的链接
+
+E:active   匹配鼠标已经其上按下、还没有释放的E元素
+E:hover       匹配鼠标悬停其上的E元素
+E:focus       匹配获得当前焦点的E元素
+E:lang(c)  匹配lang属性等于c的E元素
+
+E:enabled    匹配表单中可用的元素
+E:disabled  匹配表单中禁用的元素
+E:checked    匹配表单中被选中的radio或checkbox元素
+
+E:first-child      匹配父元素的第一个子元素E
+E:last-child      匹配父元素的最后一个子元素E
+E:only-child      匹配父元素下仅有的一个子元素E
+E:nth-child(n)       匹配父元素的第n个子元素E，
+                     假设该子元素不是E，则选择符无效。
+E:nth-last-child(n)     匹配父元素的倒数第n个子元素E，
+                     假设该子元素不是E，则选择符无效。
+
+E:first-of-type      匹配父元素下使用同种标签的第一个同级元素E，
+                  等同于:nth-of-type(1)
+E:last-of-type      匹配父元素下使用同种标签的最后一个同级元素E，
+                  等同于:nth-last-of-type(1)
+E:only-of-type      匹配父元素下使用同种标签的唯一一个子元素，
+                  等同于:first-of-type:last-of-type
+E:nth-of-type(n)       匹配父元素下使用同种标签的第n个同级兄弟元素E
+E:nth-last-of-type(n)  匹配父元素下使用同种标签的倒数第n个同级兄弟元素E
+
+E:root            匹配文档的根元素，对于HTML文档，就是HTML元素
+E:empty            匹配一个不包含任何子元素的元素，文本节点也被看作子元素
+E:not(selector)    匹配不含有s选择符的元素E
+</code></pre><p><strong>5、伪元素选择器</strong></p>
+<pre><code>E:first-line    匹配E元素内容的第一行
+E:first-letter  匹配E元素内容的第一个字母
+E:before        设置在对象前（依据对象树的逻辑结构）发生的内容。
+                必须定义content属性
+E:after            设置在对象后（依据对象树的逻辑结构）发生的内容。
+                必须定义content属性
+E::selection    匹配用户当前选中的元素(比如选中文本改变颜色背景色)
+</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/17/如何使用搜索引擎（二）/" class="archive-article-date">
-  	<time datetime="2017-06-17T03:37:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/17/如何使用搜索引擎（二）/">如何使用搜索引擎（二）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">互联网</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/15/如何使用搜索引擎/" class="archive-article-date">
-  	<time datetime="2017-06-15T03:00:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-15</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/15/如何使用搜索引擎/">如何使用搜索引擎</a>
-    </h1>
+  
+    <a href="/2017/06/28/布局总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">布局总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">互联网</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/14/Markdown语法/" class="archive-article-date">
-  	<time datetime="2017-06-14T07:13:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/14/Markdown语法/">Markdown语法</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">互联网</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/14/使用GitHub和Hexo搭建博客/" class="archive-article-date">
-  	<time datetime="2017-06-14T02:01:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/14/使用GitHub和Hexo搭建博客/">使用GitHub和Hexo搭建博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">互联网</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -319,9 +336,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
