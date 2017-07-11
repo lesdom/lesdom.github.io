@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yearslater.me">
-  <title>jQuery选择器 | Years</title>
+  <title>jQuery DOM操作 | Years</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本选择器#id      根据给定的id匹配一个元素 .class   根据给定的类名匹配元素 element  根据给定的元素名匹配元素 *        匹配所有元素 selector1，selector2... 将每一个选择器匹配到的元素合并后一起返回  $(this)  选取当前 HTML 元素">
+  <meta name="description" content="文档处理创建$(html) 元素节点 var $node = $(&amp;quot;&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;&amp;quot;); 文本节点 var $textNode = $(&amp;quot;&amp;lt;div&amp;gt;文本节点&amp;lt;/div&amp;gt;&amp;quot;); 属性节点 var $attributeNode = $(&amp;quot;&amp;lt;div title=&amp;apos;属性&amp;apos;&amp;g">
 <meta name="keywords" content="jQuery">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jQuery选择器">
-<meta property="og:url" content="http://yearslater.me/2017/07/01/jQuery选择器/index.html">
+<meta property="og:title" content="jQuery DOM操作">
+<meta property="og:url" content="http://yearslater.me/2017/07/02/jQuery-DOM操作/index.html">
 <meta property="og:site_name" content="Years">
-<meta property="og:description" content="基本选择器#id      根据给定的id匹配一个元素 .class   根据给定的类名匹配元素 element  根据给定的元素名匹配元素 *        匹配所有元素 selector1，selector2... 将每一个选择器匹配到的元素合并后一起返回  $(this)  选取当前 HTML 元素">
-<meta property="og:updated_time" content="2017-07-01T14:17:16.287Z">
+<meta property="og:description" content="文档处理创建$(html) 元素节点 var $node = $(&amp;quot;&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;&amp;quot;); 文本节点 var $textNode = $(&amp;quot;&amp;lt;div&amp;gt;文本节点&amp;lt;/div&amp;gt;&amp;quot;); 属性节点 var $attributeNode = $(&amp;quot;&amp;lt;div title=&amp;apos;属性&amp;apos;&amp;g">
+<meta property="og:updated_time" content="2017-07-11T06:32:05.119Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQuery选择器">
-<meta name="twitter:description" content="基本选择器#id      根据给定的id匹配一个元素 .class   根据给定的类名匹配元素 element  根据给定的元素名匹配元素 *        匹配所有元素 selector1，selector2... 将每一个选择器匹配到的元素合并后一起返回  $(this)  选取当前 HTML 元素">
+<meta name="twitter:title" content="jQuery DOM操作">
+<meta name="twitter:description" content="文档处理创建$(html) 元素节点 var $node = $(&amp;quot;&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;&amp;quot;); 文本节点 var $textNode = $(&amp;quot;&amp;lt;div&amp;gt;文本节点&amp;lt;/div&amp;gt;&amp;quot;); 属性节点 var $attributeNode = $(&amp;quot;&amp;lt;div title=&amp;apos;属性&amp;apos;&amp;g">
   
     <link rel="alternative" href="/atom.xml" title="Years" type="application/atom+xml">
   
@@ -134,83 +134,95 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-jQuery选择器" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-jQuery-DOM操作" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      jQuery选择器
+      jQuery DOM操作
     </h1>
   
 
         
-        <a href="/2017/07/01/jQuery选择器/" class="archive-article-date">
-  	<time datetime="2017-07-01T12:18:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-01</time>
+        <a href="/2017/07/02/jQuery-DOM操作/" class="archive-article-date">
+  	<time datetime="2017-07-02T11:15:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h2><pre><code>#id      根据给定的id匹配一个元素
-.class   根据给定的类名匹配元素
-element  根据给定的元素名匹配元素
-*        匹配所有元素
-selector1，selector2... 将每一个选择器匹配到的元素合并后一起返回
+        <h2 id="文档处理"><a href="#文档处理" class="headerlink" title="文档处理"></a>文档处理</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>$(html)</p>
+<p><strong>元素节点</strong></p>
+<pre><code>var $node = $(&quot;&lt;div&gt;&lt;/div&gt;&quot;);
+</code></pre><p><strong>文本节点</strong></p>
+<pre><code>var $textNode = $(&quot;&lt;div&gt;文本节点&lt;/div&gt;&quot;);
+</code></pre><p><strong>属性节点</strong></p>
+<pre><code>var $attributeNode = $(&quot;&lt;div title=&apos;属性&apos;&gt;&lt;p&gt;文本&lt;/p&gt;&lt;/div&gt;&quot;);
+</code></pre><h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><p><strong>内部</strong></p>
+<pre><code>$(&quot;A&quot;).append(&quot;B&quot;)    在A内部追加B，B成为A的最后一个子节点
+$(&quot;B&quot;).appendTo(&quot;A&quot;)  将B追加到A内部，B成为A的最后一个子节点
+$(&quot;A&quot;).prepend(&quot;B&quot;)   在A内部前置B，B成为A的第一个子节点
+$(&quot;B&quot;).prependTo(&quot;A&quot;) 将B前置到A内部，B成为A的第一个子节点
+</code></pre><p><strong>外部</strong></p>
+<pre><code>$(&quot;A&quot;).after(&quot;B&quot;)        在A之后插入B
+$(&quot;B&quot;).insertAfter(&quot;A&quot;)  将B插入到A后面
+$(&quot;A&quot;).before(&quot;B&quot;)       在A之前插入B
+$(&quot;B&quot;).insertBefore(&quot;A&quot;) 将B插入到A前面
+</code></pre><h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><pre><code>$(&quot;A&quot;).remove()  删除所有匹配的A元素
+$(&quot;A&quot;).detach()  删除所有匹配的A元素,保留事件，附加数据
+$(&quot;A&quot;).empty()   清空A元素的所有后代节点
+</code></pre><h3 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h3><pre><code>$(&quot;A&quot;).clone()     复制A元素并且选中A副本
+$(&quot;A&quot;).clone(true) 复制A元素及事件并且返回A副本
+</code></pre><h3 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h3><pre><code>$(&quot;A&quot;).replaceWith(&quot;B&quot;)  将A替换为B
+$(&quot;B&quot;).replaceAll(&quot;A&quot;)   将A替换为B
+</code></pre><h3 id="包裹"><a href="#包裹" class="headerlink" title="包裹"></a>包裹</h3><pre><code>$(&quot;A&quot;).wrap(&quot;B&quot;)    用B标签将每个A元素单独包裹起来
+$(&quot;A&quot;).wrapAll(&quot;B&quot;) 用一个B标签将所有A元素都包裹起来
+$(&quot;A&quot;).wrapInner(&quot;B&quot;) 用B标签将A元素的子内容(包括文本节点)包裹起来
+$(&quot;A&quot;).unwrap()       将A元素的父级元素删除，保留自身(和同辈元素)在原来的位置
+</code></pre><h2 id="筛选"><a href="#筛选" class="headerlink" title="筛选"></a>筛选</h2><h3 id="过滤"><a href="#过滤" class="headerlink" title="过滤"></a>过滤</h3><pre><code>$(&quot;A&quot;).eq(index)  取得索引为index的A元素(从0开始)
+$(&quot;A&quot;).filter()   筛选出与指定表达式或函数匹配的元素集合
+...(待续)
+$(&quot;A&quot;).first()  获取匹配A元素集合中第一个元素
+$(&quot;A&quot;).last()   获取匹配A元素集合中最后一个元素
+$(&quot;A&quot;).has(&quot;B&quot;) 保留包含B的A元素
+</code></pre><h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><pre><code>$(&quot;A&quot;).find(&quot;B&quot;)   取得A元素的后代B
+$(&quot;A&quot;).children()  取得A元素的子元素集合
 
-$(this)  选取当前 HTML 元素
-</code></pre><a id="more"></a>
-<h2 id="层级选择器"><a href="#层级选择器" class="headerlink" title="层级选择器"></a>层级选择器</h2><pre><code>ancestor descendant  在给定的祖先元素下匹配所有的后代元素
-parent&gt;child         在给定的父元素下匹配所有的子元素
-prev+next            匹配紧接在prev元素后的相邻同辈元素
-prev~siblings        匹配prev元素之后的所有同辈元素
-</code></pre><h2 id="过滤选择器"><a href="#过滤选择器" class="headerlink" title="过滤选择器"></a>过滤选择器</h2><h3 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h3><pre><code>:first  匹配找到的第一个元素
-:last   匹配找到的最后一个元素
-:even   匹配所有索引值为偶数的元素，从0开始计数
-:odd    匹配所有索引值为奇数的元素，从0开始计数
-:not(selector)  去除所有与给定选择器匹配的元素
-:eq(index)  匹配一个索引等于index的元素
-:gt(index)  匹配所有索引大于index的元素
-:lt(index)  匹配所有索引小于index的元素
-:header     匹配所有标题元素
-:animated   匹配所有正在执行动画的元素
-:focus      匹配当前获取焦点的元素
-</code></pre><h3 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h3><pre><code>:contains(text)  匹配含有文本内容为&quot;text&quot;的元素
-:empty           匹配所有不包含子元素或者文本的空元素
-:has(selector)   匹配含有选择器所匹配的元素的元素
-:parent          匹配含有子元素或者文本的元素
-</code></pre><h3 id="可见性"><a href="#可见性" class="headerlink" title="可见性"></a>可见性</h3><pre><code>:hidden   匹配所有的不可见元素
-:visible  匹配所有的可见元素
-</code></pre><h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><pre><code>[attribute]  匹配包含给定属性的元素
-[attribute=value]   匹配属性的值为value的元素
-[attribute!=value]  匹配属性的值不等于value的元素
-[attribute^=value]  匹配属性的值以value开始的元素
-[attribute$=value]  匹配属性的值以value结束的元素
-[attribute*=value]  匹配属性的值含有value的元素
-[attribute|=value]  匹配属性的值等于value或以value开头，后接-的元素
-[attribute~=value]  匹配属性用空格分隔的值中包含value的元素
-[attribute1][attribute2]...  匹配满足多个属性过滤器的元素
-</code></pre><h3 id="子元素"><a href="#子元素" class="headerlink" title="子元素"></a>子元素</h3><pre><code>:nth-child(index/even/odd)  匹配所有父元素下的第index个子元素(从1开始)或奇偶元素
-:first-child  匹配所有父元素的第一个子元素
-:last-child   匹配所有父元素的最后一个子元素
-:only-child   匹配所有父元素的唯一一个子元素
-</code></pre><h3 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h3><pre><code>:enabled   匹配所有可用元素
-:disabled  匹配所有不可用元素
-:checked   匹配所有选中的元素(单选框，复选框)
-:selected  匹配所有选中的option元素(下拉列表)
-</code></pre><h2 id="表单选择器"><a href="#表单选择器" class="headerlink" title="表单选择器"></a>表单选择器</h2><pre><code>:input  匹配所有input、textarea、select、button元素
-:text   匹配所有的单行文本框
-:password  匹配所有密码框
-:radio     匹配所有单选按钮
-:checkbox  匹配所有复选框
-:submit    匹配所有提交按钮
-:image     匹配所有图像域
-:reset     匹配所有重置按钮
-:button    匹配所有按钮
-:file      匹配所有文件域
-:hidden    匹配所有不可见元素
+$(&quot;A&quot;).next()     取得A元素后面紧邻的同辈元素
+$(&quot;A&quot;).nextAll()  取得A元素后面所有的同辈元素集合
+$(&quot;A&quot;).prev()     取得A元素前面紧邻的同辈元素
+$(&quot;A&quot;).prevAll()  取得A元素前面所有的同辈元素集合
+$(&quot;A&quot;).siblings() 取得A元素前后所有的同辈元素集合
+
+$(&quot;A&quot;).closest(&quot;B&quot;)  取得A最近的祖先元素B
+$(&quot;A&quot;).parents(&quot;B&quot;)  取得A元素的祖先元素B的集合
+$(&quot;A&quot;).parent()      取得A元素的父元素
+</code></pre><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><pre><code>end()  将匹配的元素集合恢复到前一个状态
+</code></pre><h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><h3 id="属性-1"><a href="#属性-1" class="headerlink" title="属性"></a>属性</h3><pre><code>$(&quot;A&quot;).attr(&quot;title&quot;)            获取A元素的title属性
+$(&quot;A&quot;).attr(&quot;title&quot;,&quot;example&quot;)  设置A元素的title属性
+$(&quot;A&quot;).removeAttr(&quot;title&quot;)      删除A元素的title属性
+</code></pre><h3 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a>其他</h3><pre><code>$(&quot;A&quot;).html()                获取A元素的HTML代码
+$(&quot;A&quot;).html(&quot;&lt;p&gt;hello&lt;/p&gt;&quot;)  设置A元素的HTML代码    
+$(&quot;A&quot;).text()                获取A元素的文本内容
+$(&quot;A&quot;).text(&quot;hello&quot;)         设置A元素的文本内容
+$(&quot;A&quot;).val()                 获取A元素的值(表单元素)
+$(&quot;A&quot;).val(&quot;hello&quot;)          设置A元素的值(表单元素)
+</code></pre><h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><pre><code>$(&quot;A&quot;).attr(&quot;class&quot;,&quot;example&quot;)  设置A元素的类
+
+$(&quot;A&quot;).addClass(&quot;example&quot;)      追加A元素的类
+$(&quot;A&quot;).removeClass(&quot;example&quot;)   移除A元素的类
+$(&quot;A&quot;).toggleClass(&quot;example&quot;)   切换A元素的类
+</code></pre><h3 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h3><pre><code>$(&quot;A&quot;).css(&quot;color&quot;,&quot;blue&quot;)      设置A元素颜色为蓝色
+$(&quot;A&quot;).css({
+       &quot;color&quot;:&quot;blue&quot;，
+       &quot;fontSize&quot;：&quot;30px&quot;
+      })               设置A元素颜色为蓝色,字号30px
+
+$(&quot;A&quot;).height(&quot;10rem&quot;) 设置A元素的高度值为10rem
+$(&quot;A&quot;).width(&quot;10rem&quot;)  设置A元素的宽度值为10rem
 </code></pre>
       
 
@@ -274,18 +286,9 @@ prev~siblings        匹配prev元素之后的所有同辈元素
   
 <nav id="article-nav">
   
-    <a href="/2017/07/02/jQuery-DOM操作/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          jQuery DOM操作
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/06/30/jQuery基础知识/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">jQuery基础知识</div>
+    <a href="/2017/07/01/jQuery选择器/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jQuery选择器</div>
       <i class="icon-circle-right"></i>
     </a>
   
