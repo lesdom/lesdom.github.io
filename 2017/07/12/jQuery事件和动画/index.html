@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yearslater.me">
-  <title>Archives: 2017/6 | Years</title>
+  <title>jQuery事件和动画 | Years</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Years">
-<meta property="og:url" content="http://yearslater.me/archives/2017/06/index.html">
+  <meta name="description" content="事件事件对象event.type    事件类型 event.target  获取触发事件的元素 event.pageX和event.pageY 获取光标相对于页面的xy坐标 event.preventDefault()   阻止默认事件行为 event.stopPropagation()  阻止事件冒泡">
+<meta name="keywords" content="jQuery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery事件和动画">
+<meta property="og:url" content="http://yearslater.me/2017/07/12/jQuery事件和动画/index.html">
 <meta property="og:site_name" content="Years">
+<meta property="og:description" content="事件事件对象event.type    事件类型 event.target  获取触发事件的元素 event.pageX和event.pageY 获取光标相对于页面的xy坐标 event.preventDefault()   阻止默认事件行为 event.stopPropagation()  阻止事件冒泡">
+<meta property="og:updated_time" content="2017-07-12T08:59:06.891Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Years">
+<meta name="twitter:title" content="jQuery事件和动画">
+<meta name="twitter:description" content="事件事件对象event.type    事件类型 event.target  获取触发事件的元素 event.pageX和event.pageY 获取光标相对于页面的xy坐标 event.preventDefault()   阻止默认事件行为 event.stopPropagation()  阻止事件冒泡">
   
     <link rel="alternative" href="/atom.xml" title="Years" type="application/atom+xml">
   
@@ -129,36 +134,105 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-jQuery事件和动画" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/30/jQuery基础知识/" class="archive-article-date">
-  	<time datetime="2017-06-30T03:22:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-30</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/30/jQuery基础知识/">jQuery基础知识</a>
+    <h1 class="article-title" itemprop="name">
+      jQuery事件和动画
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/07/12/jQuery事件和动画/" class="archive-article-date">
+  	<time datetime="2017-07-12T07:37:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h3><pre><code>event.type    事件类型
+event.target  获取触发事件的元素
+event.pageX和event.pageY 获取光标相对于页面的xy坐标
+event.preventDefault()   阻止默认事件行为
+event.stopPropagation()  阻止事件冒泡
+</code></pre><a id="more"></a>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>speed参数：”slow” , “normal” , “fast” (0.6s，0.4s，0.2s) 或数值(不加引号)</p>
+<h3 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h3><pre><code>show()   显示匹配的元素
+hide()   隐藏匹配的元素
+toggle() 切换元素的可见状态
+
+show(speed,[callback])
+hide(speed,[callback])
+toggle(speed,[callback])
+动画显示或隐藏匹配元素，动画完成后可选触发回调函数
+</code></pre><h3 id="滑动"><a href="#滑动" class="headerlink" title="滑动"></a>滑动</h3><pre><code>slideDown(speed,[callback])   通过高度向下增大动态显示匹配元素
+slideUp(speed,[callback])     通过高度向上减小动态隐藏匹配元素
+slideToggle(speed,[callback]) 通过高度变化切换匹配元素的可见性
+</code></pre><h3 id="淡入淡出"><a href="#淡入淡出" class="headerlink" title="淡入淡出"></a>淡入淡出</h3><pre><code>fadeIn(speed,[callback])     通过增大匹配元素不透明度实现淡入显示
+fadeOut(speed,[callback])    通过减小匹配元素不透明度实现淡出隐藏
+fadeToggle(speed,[callback]) 通过不透明度变化切换匹配元素的可见性
+fadeTo(speed,opacity,[callback]) 将匹配元素不透明度渐进调整到指定值
+</code></pre><h3 id="自定义"><a href="#自定义" class="headerlink" title="自定义"></a>自定义</h3><pre><code>animate(params,speed,callback)  创建动画
+stop([clearQueue],[gotoEnd])    停止动画
+</code></pre><p><strong>举例</strong></p>
+<p>HTML</p>
+<pre><code>#example {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #333;
+    background-color: #999;
+}
+</code></pre><p>jQuery</p>
+<pre><code>$(&quot;#example&quot;).click(function(){
+    $(this).animate({left:&quot;300px&quot;, height:&quot;200px&quot;, opacity:&quot;0.5&quot;}, 3000)
+           .animate({top:&quot;300px&quot;, width:&quot;200px&quot;, opacity:&quot;1&quot;}, 3000, function(){
+                $(this).css(&quot;border&quot;,&quot;5px solid blue&quot;);
+            })
+})
+</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -170,364 +244,37 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/29/网站导航/" class="archive-article-date">
-  	<time datetime="2017-06-29T09:12:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-29</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/29/网站导航/">网站导航</a>
-    </h1>
+  
+    <a href="/2017/07/11/第一次看海/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第一次看海</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/29/CSS选择器/" class="archive-article-date">
-  	<time datetime="2017-06-29T01:51:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/29/CSS选择器/">CSS选择器</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/28/布局总结/" class="archive-article-date">
-  	<time datetime="2017-06-28T11:11:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/28/布局总结/">布局总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/23/word总结/" class="archive-article-date">
-  	<time datetime="2017-06-23T11:39:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/23/word总结/">word总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">操作系统</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/22/正则表达式/" class="archive-article-date">
-  	<time datetime="2017-06-22T04:04:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/22/正则表达式/">正则表达式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/21/Hbuilder使用指南/" class="archive-article-date">
-  	<time datetime="2017-06-21T12:24:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/21/Hbuilder使用指南/">Hbuilder使用指南</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/20/Emmet语法/" class="archive-article-date">
-  	<time datetime="2017-06-20T12:26:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/20/Emmet语法/">Emmet语法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/19/Windows操作配置/" class="archive-article-date">
-  	<time datetime="2017-06-19T13:59:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/19/Windows操作配置/">Windows操作配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">操作系统</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/18/Windows快捷键/" class="archive-article-date">
-  	<time datetime="2017-06-18T11:26:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/18/Windows快捷键/">Windows快捷键</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">操作系统</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2017/06/page/2/">2</a><a class="extend next" rel="next" href="/archives/2017/06/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -551,8 +298,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
