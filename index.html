@@ -131,6 +131,80 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-AngularJS指令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/14/AngularJS指令/">AngularJS指令</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/14/AngularJS指令/" class="archive-article-date">
+  	<time datetime="2017-07-14T00:47:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="内置指令"><a href="#内置指令" class="headerlink" title="内置指令"></a>内置指令</h2><h3 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h3><p><strong>ng-app</strong></p>
+<p>ng-app 指令定义一个 AngularJS 应用程序，为 AngularJS 应用创建 $rootScope，具有 ng-app 属性的 DOM 元素将被标记为 $rootScope 的起始点。</p>
+<pre><code>&lt;html ng-app=&quot;myApp&quot;&gt;
+&lt;/html&gt;
+js代码:
+var app = angular.module(&apos;myApp&apos;,[]);
+</code></pre><p><strong>ng-controller</strong></p>
+<p>ng-controller 指令用于控制 AngularJS 应用程序，在控制器中，你可以编写代码，制作函数和变量，并使用 scope 对象来访问。</p>
+<pre><code>&lt;body ng-controller=&quot;myCtrl&quot;&gt;    
+&lt;/body&gt;
+js代码:
+app.controller(&apos;myCtrl&apos;,function($scope,$http){
+});
+</code></pre>
+        
+          <a class="article-more-a" href="/2017/07/14/AngularJS指令/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Angular</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/14/AngularJS指令/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-jQuery事件和动画" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -151,11 +225,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h3><pre><code>event.type    事件类型
-event.target  获取触发事件的元素
-event.pageX和event.pageY 获取光标相对于页面的xy坐标
-event.preventDefault()   阻止默认事件行为
-event.stopPropagation()  阻止事件冒泡
+        <h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h4 id="载入"><a href="#载入" class="headerlink" title="载入"></a>载入</h4><pre><code>ready(fn)  保障DOM载入就绪后执行其他操作
+</code></pre><h4 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h4><pre><code>bind(type,[data],fn)  为匹配元素的特定事件绑定事件处理函数
+unbind([type],[data]) 为匹配元素删除绑定的事件
+one(type,[data],fn)   为匹配元素的特定事件绑定一个一次性事件处理函数
+on(events[,selector][,data],handler) 在匹配元素上绑定一个或多个事件处理函数
+off(events[,selector][,handler])     移除.on()绑定的事件处理函数
 </code></pre>
         
           <a class="article-more-a" href="/2017/07/12/jQuery事件和动画/#more">more >></a>
@@ -741,69 +816,6 @@ F12     另存为
 
 
   
-    <article id="post-正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/22/正则表达式/">正则表达式</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/22/正则表达式/" class="archive-article-date">
-  	<time datetime="2017-06-22T04:04:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="入门教程"><a href="#入门教程" class="headerlink" title="入门教程"></a>入门教程</h2><p><a href="http://www.runoob.com/w3cnote/regular-expression-30-minutes-tutorial.html" target="_blank" rel="external">正则表达式30分钟入门教程</a></p>
-<p>某个字符串匹配某个正则表达式，通常是指这个字符串里有一部分（或几部分分别）能满足表达式给出的条件</p>
-<h2 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h2><p>如果需要这些字符用作文本字符，需要用反斜杠\对其进行转义。<br><br>分别为：<code>(</code>　<code>)</code>　<code>[</code>　<code>]</code>　<code>{</code>　<code>}</code>　<code>\</code>　<code>^</code>　<code>$</code>　<code>.</code>　<code>|</code>　<code>*</code>　<code>+</code>　<code>?</code></p>
-        
-          <a class="article-more-a" href="/2017/06/22/正则表达式/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/22/正则表达式/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -896,7 +908,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color3">Angular</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -904,7 +916,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -913,6 +925,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">

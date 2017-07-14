@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yearslater.me">
   <title>jQuery事件和动画 | Years</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="事件事件对象event.type    事件类型 event.target  获取触发事件的元素 event.pageX和event.pageY 获取光标相对于页面的xy坐标 event.preventDefault()   阻止默认事件行为 event.stopPropagation()  阻止事件冒泡">
+  <meta name="description" content="事件分类载入ready(fn)  保障DOM载入就绪后执行其他操作 事件绑定bind(type,[data],fn)  为匹配元素的特定事件绑定事件处理函数 unbind([type],[data]) 为匹配元素删除绑定的事件 one(type,[data],fn)   为匹配元素的特定事件绑定一个一次性事件处理函数 on(events[,selector][,data],handler) 在匹配">
 <meta name="keywords" content="jQuery">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery事件和动画">
 <meta property="og:url" content="http://yearslater.me/2017/07/12/jQuery事件和动画/index.html">
 <meta property="og:site_name" content="Years">
-<meta property="og:description" content="事件事件对象event.type    事件类型 event.target  获取触发事件的元素 event.pageX和event.pageY 获取光标相对于页面的xy坐标 event.preventDefault()   阻止默认事件行为 event.stopPropagation()  阻止事件冒泡">
-<meta property="og:updated_time" content="2017-07-12T08:59:06.891Z">
+<meta property="og:description" content="事件分类载入ready(fn)  保障DOM载入就绪后执行其他操作 事件绑定bind(type,[data],fn)  为匹配元素的特定事件绑定事件处理函数 unbind([type],[data]) 为匹配元素删除绑定的事件 one(type,[data],fn)   为匹配元素的特定事件绑定一个一次性事件处理函数 on(events[,selector][,data],handler) 在匹配">
+<meta property="og:updated_time" content="2017-07-14T00:43:18.534Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery事件和动画">
-<meta name="twitter:description" content="事件事件对象event.type    事件类型 event.target  获取触发事件的元素 event.pageX和event.pageY 获取光标相对于页面的xy坐标 event.preventDefault()   阻止默认事件行为 event.stopPropagation()  阻止事件冒泡">
+<meta name="twitter:description" content="事件分类载入ready(fn)  保障DOM载入就绪后执行其他操作 事件绑定bind(type,[data],fn)  为匹配元素的特定事件绑定事件处理函数 unbind([type],[data]) 为匹配元素删除绑定的事件 one(type,[data],fn)   为匹配元素的特定事件绑定一个一次性事件处理函数 on(events[,selector][,data],handler) 在匹配">
   
     <link rel="alternative" href="/atom.xml" title="Years" type="application/atom+xml">
   
@@ -154,13 +154,39 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h3><pre><code>event.type    事件类型
+        <h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h4 id="载入"><a href="#载入" class="headerlink" title="载入"></a>载入</h4><pre><code>ready(fn)  保障DOM载入就绪后执行其他操作
+</code></pre><h4 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h4><pre><code>bind(type,[data],fn)  为匹配元素的特定事件绑定事件处理函数
+unbind([type],[data]) 为匹配元素删除绑定的事件
+one(type,[data],fn)   为匹配元素的特定事件绑定一个一次性事件处理函数
+on(events[,selector][,data],handler) 在匹配元素上绑定一个或多个事件处理函数
+off(events[,selector][,handler])     移除.on()绑定的事件处理函数
+</code></pre><a id="more"></a>
+<h4 id="交互"><a href="#交互" class="headerlink" title="交互"></a>交互</h4><pre><code>hover(over,out)     模拟悬停事件(光标移上和移出)
+toggle(fn1,fn2,···) 每次单击后依次调用函数
+
+click(fn)     单击
+dblclick(fn)  双击
+blur(fn)      失焦
+focus(fn)     聚焦
+change(fn)    内容改变
+select(fn)    选中
+submit(fn)    提交
+</code></pre><h4 id="鼠标"><a href="#鼠标" class="headerlink" title="鼠标"></a>鼠标</h4><pre><code>mousedown(fn)  当鼠标指针移动到元素上方，并按下鼠标左键时
+mouseup(fn)    当鼠标指针移动到元素上方，并松开鼠标左键时
+mouseenter(fn) 当鼠标指针穿过（进入）被选元素时
+mouseleave(fn) 当鼠标指针离开被选元素时
+mousemove(fn)  当鼠标指针在指定的元素中移动时
+mouseover(fn)  当鼠标指针位于元素上方时
+mouseout(fn)   当鼠标指针离开被选元素时
+</code></pre><h4 id="键盘"><a href="#键盘" class="headerlink" title="键盘"></a>键盘</h4><pre><code>keydown(fn)    键按下
+keypress(fn)   键被按下
+keyup(fn)      键被松开
+</code></pre><h3 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h3><pre><code>event.type    事件类型
 event.target  获取触发事件的元素
 event.pageX和event.pageY 获取光标相对于页面的xy坐标
 event.preventDefault()   阻止默认事件行为
 event.stopPropagation()  阻止事件冒泡
-</code></pre><a id="more"></a>
-<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>speed参数：”slow” , “normal” , “fast” (0.6s，0.4s，0.2s) 或数值(不加引号)</p>
+</code></pre><h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>speed参数：”slow” , “normal” , “fast” (0.6s，0.4s，0.2s) 或数值(不加引号)</p>
 <h3 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h3><pre><code>show()   显示匹配的元素
 hide()   隐藏匹配的元素
 toggle() 切换元素的可见状态
@@ -256,6 +282,15 @@ stop([clearQueue],[gotoEnd])    停止动画
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/07/14/AngularJS指令/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          AngularJS指令
+        
+      </div>
+    </a>
   
   
     <a href="/2017/07/11/第一次看海/" id="article-nav-older" class="article-nav-link-wrap">
@@ -363,7 +398,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color3">Angular</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -371,7 +406,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -380,6 +415,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">

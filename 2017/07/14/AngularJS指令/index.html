@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yearslater.me">
-  <title>Tag: jQuery | Years</title>
+  <title>AngularJS指令 | Years</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Years">
-<meta property="og:url" content="http://yearslater.me/tags/jQuery/index.html">
+  <meta name="description" content="内置指令基本ng-app ng-app 指令定义一个 AngularJS 应用程序，为 AngularJS 应用创建 $rootScope，具有 ng-app 属性的 DOM 元素将被标记为 $rootScope 的起始点。 &amp;lt;html ng-app=&amp;quot;myApp&amp;quot;&amp;gt; &amp;lt;/html&amp;gt; js代码: var app = angular.module(&amp;apo">
+<meta name="keywords" content="Angular">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AngularJS指令">
+<meta property="og:url" content="http://yearslater.me/2017/07/14/AngularJS指令/index.html">
 <meta property="og:site_name" content="Years">
+<meta property="og:description" content="内置指令基本ng-app ng-app 指令定义一个 AngularJS 应用程序，为 AngularJS 应用创建 $rootScope，具有 ng-app 属性的 DOM 元素将被标记为 $rootScope 的起始点。 &amp;lt;html ng-app=&amp;quot;myApp&amp;quot;&amp;gt; &amp;lt;/html&amp;gt; js代码: var app = angular.module(&amp;apo">
+<meta property="og:updated_time" content="2017-07-14T10:40:06.481Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Years">
+<meta name="twitter:title" content="AngularJS指令">
+<meta name="twitter:description" content="内置指令基本ng-app ng-app 指令定义一个 AngularJS 应用程序，为 AngularJS 应用创建 $rootScope，具有 ng-app 属性的 DOM 元素将被标记为 $rootScope 的起始点。 &amp;lt;html ng-app=&amp;quot;myApp&amp;quot;&amp;gt; &amp;lt;/html&amp;gt; js代码: var app = angular.module(&amp;apo">
   
     <link rel="alternative" href="/atom.xml" title="Years" type="application/atom+xml">
   
@@ -129,174 +134,256 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-AngularJS指令" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      AngularJS指令
+    </h1>
+  
+
+        
+        <a href="/2017/07/14/AngularJS指令/" class="archive-article-date">
+  	<time datetime="2017-07-14T00:47:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-14</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="内置指令"><a href="#内置指令" class="headerlink" title="内置指令"></a>内置指令</h2><h3 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h3><p><strong>ng-app</strong></p>
+<p>ng-app 指令定义一个 AngularJS 应用程序，为 AngularJS 应用创建 $rootScope，具有 ng-app 属性的 DOM 元素将被标记为 $rootScope 的起始点。</p>
+<pre><code>&lt;html ng-app=&quot;myApp&quot;&gt;
+&lt;/html&gt;
+js代码:
+var app = angular.module(&apos;myApp&apos;,[]);
+</code></pre><p><strong>ng-controller</strong></p>
+<p>ng-controller 指令用于控制 AngularJS 应用程序，在控制器中，你可以编写代码，制作函数和变量，并使用 scope 对象来访问。</p>
+<pre><code>&lt;body ng-controller=&quot;myCtrl&quot;&gt;    
+&lt;/body&gt;
+js代码:
+app.controller(&apos;myCtrl&apos;,function($scope,$http){
+});
+</code></pre><a id="more"></a>
+<p><strong>ng-cloak</strong></p>
+<p>ng-cloak 指令用于在 AngularJS 应用在加载时防止 AngularJS 代码未加载完而出现的问题。<br>AngularJS 应用在加载时，文档可能会由于AngularJS 代码未加载完而出现显示 AngularJS 代码，进而会有闪烁的效果， ng-cloak 指令是为了防止该问题的发生。</p>
+<pre><code>&lt;p ng-cloak&gt;{{ 5 + 5 }}&lt;/p&gt;
+</code></pre><h3 id="绑定"><a href="#绑定" class="headerlink" title="绑定"></a>绑定</h3><p><strong>ng-bind</strong></p>
+<p>ng-bind 指令把应用程序数据绑定到 HTML 视图，用于普通元素。</p>
+<pre><code>&lt;p ng-bind=&quot;&apos;名字:&apos;+person.name&quot;&gt;&lt;/p&gt;
+js代码:
+$scope.person=
+     {
+         &quot;name&quot;:&quot;King&quot;,
+         &quot;age&quot;:18
+     };
+</code></pre><p><strong></strong></p>
+<p>AngularJS 表达式把数据绑定到 HTML ， 同 ng-bind</p>
+<pre><code>&lt;p&gt;{{'名字:'+person.name}}&lt;/p&gt;
+js代码:
+$scope.person=
+     {
+         &quot;name&quot;:&quot;King&quot;,
+         &quot;age&quot;:18
+     };
+</code></pre><p><strong>ng-model</strong></p>
+<p>ng-model 指令用于 input、select、textarea 等表单元素，双向绑定。</p>
+<pre><code>&lt;input type=&quot;text&quot; ng-model=&quot;name&quot; /&gt;
+js代码:
+ $scope.name = &quot;Lee&quot;;
+</code></pre><h3 id="显示"><a href="#显示" class="headerlink" title="显示"></a>显示</h3><h3 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h3><p><strong>ng-checked</strong></p>
+<p>ng-checked 指令用于设置复选框(checkbox)或单选按钮(radio)的 checked 属性。<br>如果 ng-checked 属性返回 true，复选框(checkbox)或单选按钮(radio)将会被选中。</p>
+<pre><code>&lt;input type=&quot;checkbox&quot; ng-model=&quot;all&quot;&gt; Check all&lt;br&gt;&lt;br&gt;
+&lt;input type=&quot;checkbox&quot; ng-checked=&quot;all&quot;&gt;Volvo&lt;br&gt;
+&lt;input type=&quot;checkbox&quot; ng-checked=&quot;all&quot;&gt;Ford&lt;br&gt;
+&lt;input type=&quot;checkbox&quot; ng-checked=&quot;all&quot;&gt;Mercedes
+</code></pre><p><strong>ng-selected</strong></p>
+<p>ng-selected 指令用于设置 <select> 列表中的 <option> 元素的 selected 属性。<br>ng-selected 属性的表达式返回 true 则选项被选中。</option></select></p>
+<pre><code>点击复选框选择 blue 选项:&lt;input type=&quot;checkbox&quot; ng-model=&quot;mySel&quot;&gt;
+&lt;select&gt;
+    &lt;option&gt;red&lt;/option&gt;
+    &lt;option ng-selected=&quot;mySel&quot;&gt;blue&lt;/option&gt;    
+&lt;/select&gt;
+</code></pre><p><strong>ng-disabled</strong></p>
+<p>ng-disabled 指令设置表单输入字段的 disabled 属性(input, select, textarea , button )。<br>如果 ng-disabled 中的表达式返回 true 则表单字段将被禁用。</p>
+<pre><code>设置禁用:&lt;input type=&quot;checkbox&quot; ng-model=&quot;all&quot;&gt;&lt;br&gt;
+&lt;input type=&quot;text&quot; ng-disabled=&quot;all&quot;&gt;
+&lt;input type=&quot;radio&quot; ng-disabled=&quot;all&quot;&gt;
+</code></pre><p><strong>ng-readonly</strong></p>
+<p>ng-readonly 指令用于设置表单域(input 或 textarea) 的 readonly 属性。<br>如果 ng-readonly 属性的表达式返回 true 则表单域为只读。</p>
+<pre><code>设置只读:&lt;input type=&quot;checkbox&quot; ng-model=&quot;all&quot;&gt;&lt;br&gt;
+&lt;input type=&quot;text&quot; ng-readonly=&quot;all&quot;&gt;
+</code></pre><h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><p><strong>ng-class</strong></p>
+<p>ng-class 指令用于给 HTML 元素动态绑定一个或多个 CSS 类。<br>ng-class 指令的值可以是字符串，对象，或一个数组。</p>
+<p>如果是字符串，多个类名使用空格分隔。</p>
+<pre><code>&lt;select ng-model=&quot;home&quot;&gt;
+    &lt;option value=&quot;red&quot;&gt;红色&lt;/option&gt;
+    &lt;option value=&quot;blue&quot;&gt;蓝色&lt;/option&gt;
+&lt;/select&gt;
+&lt;p ng-class=&quot;home&quot;&gt;hello&lt;/p&gt;
+css代码:
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
+</code></pre><p>如果是对象，需要使用 key-value 对，key 为你想要添加的类名，value 是一个布尔值。只有在 value 为 true 时类才会被添加。</p>
+<pre><code>&lt;button ng-click=&quot;getNumber()&quot; &gt;Get Number!&lt;/button&gt;
+&lt;p ng-class=&quot;{&apos;red&apos;: x&gt;5, &apos;blue&apos;: !(x&gt;5)}&quot;&gt;hello&lt;/p&gt;
+css代码:
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
+js代码:
+$scope.getNumber = function() {
+    $scope.x = Math.floor((Math.random() *10) +1);
+};
+</code></pre><p>如果是数组，可以由字符串或对象组合组成，数组的元素可以是字符串或对象。</p>
+<pre><code>&lt;div ng-class=&quot;{true:&apos;red&apos;,false:&apos;blue&apos;}[color]&quot;&gt;hello&lt;/div&gt;
+css代码:
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
+js代码:
+var status = resp.data.mainData;(后台获取)    
+if($scope.status == &quot;0&quot;) {
+    $scope.color == true;
+} else if ($scope.status == &quot;1&quot;){
+    $scope.color == false;
+}
+</code></pre><p><strong>ng-class-even</strong> 和 <strong>ng-class-odd</strong></p>
+<p>ng-class-even 指令用于为 HTML 元素动态的绑定一个或多个 CSS 类，但只作用于偶数行。<br>ng-class-odd 指令用于为 HTML 元素动态的绑定一个或多个 CSS 类，但只作用于奇数行。<br>这两个指令都需要与 ng-repeat 指令搭配使用。</p>
+<pre><code>&lt;li ng-repeat=&quot;name in names&quot;&gt;
+    &lt;span ng-class-odd=&quot;&apos;red&apos;&quot; ng-class-even=&quot;&apos;blue&apos;&quot;&gt;
+        {{name}}      
+    &lt;/span&gt;
+&lt;/li&gt;
+css代码:
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
+js代码:
+$scope.names=[&apos;John&apos;, &apos;Mary&apos;, &apos;Cate&apos;, &apos;Suz&apos;]&quot;;
+</code></pre><h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><ul>
+<li>ng-focus</li>
+<li><p>ng-blur</p>
+<p>  window, input, select, textarea, a 支持此两个指令。</p>
+</li>
+<li><p>ng-change</p>
+<p>  input, select, textarea 支持该指令。</p>
+</li>
+<li><p>ng-click</p>
+</li>
+<li>ng-dbl-click</li>
+<li>ng-mousedown</li>
+<li>ng-mouseup</li>
+<li>ng-mouseenter</li>
+<li>ng-mouseleave</li>
+<li>ng-mousemove</li>
+<li>ng-mouseover</li>
+<li>ng-keydown</li>
+<li>ng-keyup</li>
+<li>ng-keypress</li>
+<li>ng-copy</li>
+<li>ng-cut</li>
+</ul>
+<h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p><a href="https://docs.angularjs.org/api/ng/directive" target="_blank" rel="external">英文</a></p>
+<p><a href="http://www.angularjs.net.cn/api/ng/directive/" target="_blank" rel="external">中文</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/12/jQuery事件和动画/" class="archive-article-date">
-  	<time datetime="2017-07-12T07:37:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/12/jQuery事件和动画/">jQuery事件和动画</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Angular</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/02/jQuery-DOM操作/" class="archive-article-date">
-  	<time datetime="2017-07-02T11:15:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-02</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/02/jQuery-DOM操作/">jQuery DOM操作</a>
-    </h1>
+  
+    <a href="/2017/07/12/jQuery事件和动画/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jQuery事件和动画</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/01/jQuery选择器/" class="archive-article-date">
-  	<time datetime="2017-07-01T12:18:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/01/jQuery选择器/">jQuery选择器</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/30/jQuery基础知识/" class="archive-article-date">
-  	<time datetime="2017-06-30T03:22:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/30/jQuery基础知识/">jQuery基础知识</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -319,9 +406,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
