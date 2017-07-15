@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yearslater.me">
-  <title>AngularJS指令 | Years</title>
+  <title>Angular指令 | Years</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="内置指令基本ng-app ng-app 指令定义一个 AngularJS 应用程序，为 AngularJS 应用创建 $rootScope，具有 ng-app 属性的 DOM 元素将被标记为 $rootScope 的起始点。 &amp;lt;html ng-app=&amp;quot;myApp&amp;quot;&amp;gt; &amp;lt;/html&amp;gt; js代码: var app = angular.module(&amp;apo">
 <meta name="keywords" content="Angular">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AngularJS指令">
-<meta property="og:url" content="http://yearslater.me/2017/07/14/AngularJS指令/index.html">
+<meta property="og:title" content="Angular指令">
+<meta property="og:url" content="http://yearslater.me/2017/07/15/Angular指令/index.html">
 <meta property="og:site_name" content="Years">
 <meta property="og:description" content="内置指令基本ng-app ng-app 指令定义一个 AngularJS 应用程序，为 AngularJS 应用创建 $rootScope，具有 ng-app 属性的 DOM 元素将被标记为 $rootScope 的起始点。 &amp;lt;html ng-app=&amp;quot;myApp&amp;quot;&amp;gt; &amp;lt;/html&amp;gt; js代码: var app = angular.module(&amp;apo">
-<meta property="og:updated_time" content="2017-07-14T10:40:06.481Z">
+<meta property="og:updated_time" content="2017-07-15T03:30:12.138Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AngularJS指令">
+<meta name="twitter:title" content="Angular指令">
 <meta name="twitter:description" content="内置指令基本ng-app ng-app 指令定义一个 AngularJS 应用程序，为 AngularJS 应用创建 $rootScope，具有 ng-app 属性的 DOM 元素将被标记为 $rootScope 的起始点。 &amp;lt;html ng-app=&amp;quot;myApp&amp;quot;&amp;gt; &amp;lt;/html&amp;gt; js代码: var app = angular.module(&amp;apo">
   
     <link rel="alternative" href="/atom.xml" title="Years" type="application/atom+xml">
@@ -134,20 +134,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-AngularJS指令" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Angular指令" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      AngularJS指令
+      Angular指令
     </h1>
   
 
         
-        <a href="/2017/07/14/AngularJS指令/" class="archive-article-date">
-  	<time datetime="2017-07-14T00:47:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-14</time>
+        <a href="/2017/07/15/Angular指令/" class="archive-article-date">
+  	<time datetime="2017-07-15T03:12:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-15</time>
 </a>
         
       </header>
@@ -171,6 +171,11 @@ app.controller(&apos;myCtrl&apos;,function($scope,$http){
 <p><strong>ng-cloak</strong></p>
 <p>ng-cloak 指令用于在 AngularJS 应用在加载时防止 AngularJS 代码未加载完而出现的问题。<br>AngularJS 应用在加载时，文档可能会由于AngularJS 代码未加载完而出现显示 AngularJS 代码，进而会有闪烁的效果， ng-cloak 指令是为了防止该问题的发生。</p>
 <pre><code>&lt;p ng-cloak&gt;{{ 5 + 5 }}&lt;/p&gt;
+</code></pre><p><strong>ng-init</strong></p>
+<p>ng-init 指令用来在指令被调用时设置内部作用域的初始状态，ng-init 仅用于创建小的示例代码。</p>
+<pre><code>&lt;div ng-init=&quot;myText=&apos;Hello World!&apos;&quot;&gt;
+    &lt;h1&gt;{{myText}}&lt;/h1&gt;
+&lt;/div&gt;
 </code></pre><h3 id="绑定"><a href="#绑定" class="headerlink" title="绑定"></a>绑定</h3><p><strong>ng-bind</strong></p>
 <p>ng-bind 指令把应用程序数据绑定到 HTML 视图，用于普通元素。</p>
 <pre><code>&lt;p ng-bind=&quot;&apos;名字:&apos;+person.name&quot;&gt;&lt;/p&gt;
@@ -194,14 +199,43 @@ $scope.person=
 <pre><code>&lt;input type=&quot;text&quot; ng-model=&quot;name&quot; /&gt;
 js代码:
  $scope.name = &quot;Lee&quot;;
-</code></pre><h3 id="显示"><a href="#显示" class="headerlink" title="显示"></a>显示</h3><h3 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h3><p><strong>ng-checked</strong></p>
+</code></pre><h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><p><strong>ng-repeat</strong></p>
+<p>ng-repeat 指令用于循环输出指定次数的 HTML 元素。集合必须是数组或对象。</p>
+<p>遍历数组</p>
+<pre><code>&lt;li ng-repeat=&quot;x in names&quot;&gt;{{x}}&lt;/li&gt;
+js代码:
+$scope.names=[&apos;John&apos;, &apos;Mary&apos;, &apos;Cate&apos;, &apos;Suz&apos;];
+</code></pre><p>遍历对象</p>
+<pre><code>&lt;li ng-repeat=&quot;(name, color) in people&quot;&gt;
+    {{ name }}&apos;s favorite color is {{ color }}
+&lt;/li&gt;
+js代码:
+$scope.people = {
+    &apos;A&apos;: &apos;orange&apos;,
+    &apos;Q&apos;: &apos;purple&apos;,
+    &apos;S&apos;: &apos;green&apos;
+}
+</code></pre><h3 id="显示和隐藏"><a href="#显示和隐藏" class="headerlink" title="显示和隐藏"></a>显示和隐藏</h3><p><strong>ng-hide</strong></p>
+<p>ng-hide 指令在表达式为 true 时隐藏 HTML 元素。<br>ng-hide 是 AngularJS 的预定义类，设置元素的 display 为 none。</p>
+<pre><code>隐藏: &lt;input type=&quot;checkbox&quot; ng-model=&quot;myVar&quot;&gt;
+&lt;div ng-hide=&quot;myVar&quot;&gt;hello&lt;/div&gt;
+</code></pre><p><strong>ng-show</strong></p>
+<p>ng-show 指令在表达式为 true 时显示指定的 HTML 元素，否则隐藏指定的 HTML 元素。</p>
+<pre><code>显示: &lt;input type=&quot;checkbox&quot; ng-model=&quot;myVar&quot;&gt;
+&lt;div ng-show=&quot;myVar&quot;&gt;hello&lt;/div&gt;
+</code></pre><p><strong>ng-if</strong></p>
+<p>ng-if 指令用于在表达式为 false 时移除 HTML 元素。<br>如果 if 语句执行的结果为 true，会添加移除元素，并显示。<br>ng-if 指令不同于 ng-hide， ng-hide 隐藏元素，而 ng-if 是从 DOM 中移除元素。</p>
+<pre><code>&lt;div ng-if=&quot;arr.length&gt;1&quot;&gt;hello&lt;/div&gt;
+js代码:
+$scope.arr=[&apos;John&apos;, &apos;Mary&apos;, &apos;Cate&apos;, &apos;Suz&apos;];
+</code></pre><h3 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h3><p><strong>ng-checked</strong></p>
 <p>ng-checked 指令用于设置复选框(checkbox)或单选按钮(radio)的 checked 属性。<br>如果 ng-checked 属性返回 true，复选框(checkbox)或单选按钮(radio)将会被选中。</p>
 <pre><code>&lt;input type=&quot;checkbox&quot; ng-model=&quot;all&quot;&gt; Check all&lt;br&gt;&lt;br&gt;
 &lt;input type=&quot;checkbox&quot; ng-checked=&quot;all&quot;&gt;Volvo&lt;br&gt;
 &lt;input type=&quot;checkbox&quot; ng-checked=&quot;all&quot;&gt;Ford&lt;br&gt;
 &lt;input type=&quot;checkbox&quot; ng-checked=&quot;all&quot;&gt;Mercedes
 </code></pre><p><strong>ng-selected</strong></p>
-<p>ng-selected 指令用于设置 <select> 列表中的 <option> 元素的 selected 属性。<br>ng-selected 属性的表达式返回 true 则选项被选中。</option></select></p>
+<p>ng-selected 指令用于设置 select 列表中的 option 元素的 selected 属性。<br>ng-selected 属性的表达式返回 true 则选项被选中。</p>
 <pre><code>点击复选框选择 blue 选项:&lt;input type=&quot;checkbox&quot; ng-model=&quot;mySel&quot;&gt;
 &lt;select&gt;
     &lt;option&gt;red&lt;/option&gt;
@@ -216,6 +250,20 @@ js代码:
 <p>ng-readonly 指令用于设置表单域(input 或 textarea) 的 readonly 属性。<br>如果 ng-readonly 属性的表达式返回 true 则表单域为只读。</p>
 <pre><code>设置只读:&lt;input type=&quot;checkbox&quot; ng-model=&quot;all&quot;&gt;&lt;br&gt;
 &lt;input type=&quot;text&quot; ng-readonly=&quot;all&quot;&gt;
+</code></pre><p><strong>ng-list</strong></p>
+<p>ng-list 指令将字符串转换为数组，并使用逗号分隔。</p>
+<pre><code>&lt;input type=&quot;text&quot; ng-model=&quot;value&quot; ng-list&gt;
+{{value}}
+</code></pre><p><strong>ng-options</strong></p>
+<p>ng-options 指令用于使用 options 填充 select 元素的选项。<br>ng-options 指令使用数组来填充下拉列表，多数情况下与 ng-repeat 指令一起使用。</p>
+<pre><code>&lt;select ng-model=&quot;selectedName&quot; ng-options=&quot;item for item in names&quot;&gt;&lt;/select&gt;
+js代码:
+$scope.names = [&quot;Emil&quot;, &quot;Tobias&quot;, &quot;Linus&quot;];
+</code></pre><p><strong>ng-value</strong></p>
+<p>ng-value 指令用于设置 input 或 select 元素的 value 属性。</p>
+<pre><code>&lt;input ng-value=&quot;myVar&quot;&gt;
+js代码:
+$scope.myVar = &quot;Hello World!&quot;;
 </code></pre><h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><p><strong>ng-class</strong></p>
 <p>ng-class 指令用于给 HTML 元素动态绑定一个或多个 CSS 类。<br>ng-class 指令的值可以是字符串，对象，或一个数组。</p>
 <p>如果是字符串，多个类名使用空格分隔。</p>
@@ -276,17 +324,43 @@ css代码:
     color: blue;
 }
 js代码:
-$scope.names=[&apos;John&apos;, &apos;Mary&apos;, &apos;Cate&apos;, &apos;Suz&apos;]&quot;;
+$scope.names=[&apos;John&apos;, &apos;Mary&apos;, &apos;Cate&apos;, &apos;Suz&apos;];
+</code></pre><p><strong>ng-style</strong></p>
+<p>ng-style 指令为 HTML 元素添加 style 属性。<br>ng-style 属性值必须是对象，表达式返回的也是对象。<br>对象由 CSS 属性和值组成，即 key=&gt;value 对。</p>
+<pre><code>&lt;p ng-style=&quot;myObj&quot;&gt;hello&lt;/p&gt;
+js代码:
+$scope.myObj = {
+    &quot;color&quot; : &quot;white&quot;,
+    &quot;background-color&quot; : &quot;coral&quot;,
+    &quot;font-size&quot; : &quot;60px&quot;,
+    &quot;padding&quot; : &quot;50px&quot;
+}
+</code></pre><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p><strong>ng-src</strong></p>
+<p>ng-src 指令覆盖了 img 元素的 src 属性。<br>如果你使用了 AngularJS 代码设置图片地址，请使用 ng-src 指令替代 src 属性。<br>ng-src 指令确保的 AngularJS 代码执行前不显示图片。</p>
+<pre><code>&lt;img ng-src=&quot;{{imagePath}}&quot;&gt;
+js代码:
+$scope.imagePath=&quot;http://angular.jpg&quot;;
+</code></pre><p><strong>ng-href</strong></p>
+<p>ng-href 指令覆盖了原生的 a 元素 href 属性。<br>如果在 href 的值中有 AngularJS 代码，则需要使用 ng-href 而不是 href。<br>ng-href 指令确保了链接是正常的，即使在 AngularJS 执行代码前点击链接。</p>
+<pre><code>&lt;a ng-href=&quot;{{myHref}}&quot;&gt;{{myHref}}&lt;/a&gt;
+js代码:
+$scope.myHref=&quot;http://yearslater.me&quot;;
+</code></pre><p><strong>ng-switch</strong></p>
+<p>ng-switch 指令根据表达式显示或隐藏对应的部分。<br>对应的子元素使用 ng-switch-when 指令，如果匹配选中选择显示，其他为匹配的则移除。<br>你可以通过使用 ng-switch-default 指令设置默认选项，如果都没有匹配的情况，默认选项会显示</p>
+<pre><code>&lt;select ng-model=&quot;myVar&quot;&gt;
+    &lt;option value=&quot;red&quot;&gt;red
+    &lt;option value=&quot;blue&quot;&gt;blue
+&lt;/select&gt;
+&lt;div ng-switch=&quot;myVar&quot;&gt;
+    &lt;div ng-switch-when=&quot;red&quot;&gt;红色&lt;/div&gt;
+    &lt;div ng-switch-when=&quot;blue&quot;&gt;蓝色&lt;/div&gt;
+    &lt;div ng-switch-default&gt;切换颜色&lt;/div&gt;
+&lt;/div&gt;
 </code></pre><h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><ul>
-<li>ng-focus</li>
-<li><p>ng-blur</p>
-<p>  window, input, select, textarea, a 支持此两个指令。</p>
-</li>
-<li><p>ng-change</p>
-<p>  input, select, textarea 支持该指令。</p>
-</li>
-<li><p>ng-click</p>
-</li>
+<li>ng-focus  (window, input, select, textarea, a 。)</li>
+<li>ng-blur   (window, input, select, textarea, a 。)</li>
+<li>ng-change (input, select, textarea 支持该指令。)</li>
+<li>ng-click</li>
 <li>ng-dbl-click</li>
 <li>ng-mousedown</li>
 <li>ng-mouseup</li>
@@ -299,6 +373,8 @@ $scope.names=[&apos;John&apos;, &apos;Mary&apos;, &apos;Cate&apos;, &apos;Suz&ap
 <li>ng-keypress</li>
 <li>ng-copy</li>
 <li>ng-cut</li>
+<li>ng-paste</li>
+<li>ng-submit</li>
 </ul>
 <h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p><a href="https://docs.angularjs.org/api/ng/directive" target="_blank" rel="external">英文</a></p>
 <p><a href="http://www.angularjs.net.cn/api/ng/directive/" target="_blank" rel="external">中文</a></p>
@@ -479,7 +555,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -491,7 +567,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
