@@ -131,6 +131,182 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-jQuery实例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/20/jQuery实例/">jQuery实例</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/20/jQuery实例/" class="archive-article-date">
+  	<time datetime="2017-07-20T12:09:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h2><p>1、聚焦失焦</p>
+<pre><code>&lt;input id=&quot;username&quot; type=&quot;text&quot;&gt;
+css代码:
+#username {
+    border: 1px solid #d4d4d4;
+}
+.focus {
+    border: 1px solid #0287d2;
+    background-color: #fcc;
+}
+jQuery代码:
+$(&quot;#username&quot;).focus(function(){
+    $(this).addClass(&quot;focus&quot;);
+}).blur(function(){
+    $(this).removeClass(&quot;focus&quot;);
+});
+</code></pre><p>2、复选框全选，全不选，反选</p>
+<p><strong>按钮</strong></p>
+<pre><code>&lt;input type=&quot;checkbox&quot; name=&quot;items&quot; value=&quot;一&quot; /&gt;一
+&lt;input type=&quot;checkbox&quot; name=&quot;items&quot; value=&quot;二&quot; /&gt;二
+&lt;input type=&quot;button&quot; id=&quot;checkedAll&quot; value=&quot;全选&quot; /&gt;
+&lt;input type=&quot;button&quot; id=&quot;checkedNo&quot; value=&quot;全不选&quot; /&gt;
+&lt;input type=&quot;button&quot; id=&quot;checkedRev&quot; value=&quot;反选&quot; /&gt;
+jQuery代码:
+$(&quot;#checkedAll&quot;).click(function(){
+    $(&quot;[name=items]:checkbox&quot;).prop(&quot;checked&quot;,true);
+});
+$(&quot;#checkedNo&quot;).click(function(){
+    $(&quot;[name=items]:checkbox&quot;).prop(&quot;checked&quot;,false);
+});
+$(&quot;#checkedRev&quot;).click(function(){
+    $(&quot;[name=items]:checkbox&quot;).each(function(){
+        $(this).prop(&quot;checked&quot;,!$(this).prop(&quot;checked&quot;));
+        //或this.checked=!this.checked;
+    });
+});
+</code></pre><p><strong>复选框</strong></p>
+<pre><code>&lt;input type=&quot;checkbox&quot; name=&quot;items&quot; value=&quot;一&quot; /&gt;一
+&lt;input type=&quot;checkbox&quot; name=&quot;items&quot; value=&quot;二&quot; /&gt;二
+&lt;input type=&quot;checkbox&quot; id=&quot;checkedAll&quot; value=&quot;全选/全不选&quot; /&gt;
+jQuery代码:
+$(&quot;#checkedAll&quot;).click(function(){
+    if(this.checked){
+        $(&quot;[name=items]:checkbox&quot;).prop(&quot;checked&quot;,true);
+    }else{
+        $(&quot;[name=items]:checkbox&quot;).prop(&quot;checked&quot;,false);
+    }
+});
+或
+$(&quot;#checkedAll&quot;).click(function(){
+    $(&quot;[name=items]:checkbox&quot;).prop(&quot;checked&quot;,this.checked);
+});
+</code></pre><p>将全选复选框和复选框组联系起来</p>
+<pre><code>$(&quot;[name=items]:checkbox&quot;).click(function(){
+    var flag=true;
+    $(&quot;[name=items]:checkbox&quot;).each(function(){
+        if(!this.checked){
+            flag=false;
+        }
+    });
+    $(&quot;#checkedAll&quot;).prop(&quot;checked&quot;,flag);
+});
+或
+$(&quot;[name=items]:checkbox&quot;).click(function(){
+    var $tmp=$(&quot;[name=items]:checkbox&quot;);
+    $(&quot;#checkedAll&quot;).prop(&quot;checked&quot;,$tmp.length==$tmp.filter(&quot;:checked&quot;).length);
+});
+</code></pre><p><strong>单组复选框全选</strong></p>
+<pre><code>&lt;input type=&quot;checkbox&quot; id=&quot;one&quot; class=&quot;group&quot; /&gt;组一
+&lt;input type=&quot;checkbox&quot; name=&quot;one&quot;/&gt;内容
+&lt;input type=&quot;checkbox&quot; name=&quot;one&quot;/&gt;内容
+&lt;input type=&quot;checkbox&quot; id=&quot;two&quot; class=&quot;group&quot; /&gt;组二    
+&lt;input type=&quot;checkbox&quot; name=&quot;two&quot; /&gt;内容
+&lt;input type=&quot;checkbox&quot; id=&quot;checkedAll&quot; value=&quot;全选/全不选&quot; /&gt;
+jQuery代码:
+$(&quot;.group&quot;).click(function(){
+    var groupId = $(this).attr(&quot;id&quot;);
+    if(this.checked){
+        $(&quot;[name=&quot; + groupId + &quot;]:checkbox&quot;).prop(&quot;checked&quot;,true);
+    }else{
+        $(&quot;[name=&quot; + groupId + &quot;]:checkbox&quot;).prop(&quot;checked&quot;,false);
+    }
+});
+</code></pre><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>1、选项卡</p>
+<pre><code>&lt;div class=&quot;tab_menu&quot;&gt;
+    &lt;p class=&quot;choiced&quot;&gt;一&lt;/p&gt;
+    &lt;p class=&quot;choice&quot;&gt;二&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;tab_box&quot;&gt;
+    &lt;div&gt;一&lt;/div&gt;
+    &lt;div class=&quot;hide&quot;&gt;二&lt;/div&gt;
+&lt;/div&gt;
+jQuery代码:
+var $tab = $(&apos;.tab_menu p&apos;);
+$tab.click(function(){
+    $(this).addClass(&apos;choiced&apos;)
+           .siblings().removeClass(&apos;choiced&apos;).addClass(&apos;choice&apos;);
+    var index = $tab.index(this);
+    $(&quot;.tab_box &gt; div&quot;)
+        .eq(index).show()
+        .siblings().hide();
+});
+</code></pre><p>或</p>
+<pre><code>&lt;div class=&quot;tab_menu&quot;&gt;
+    &lt;p class=&quot;choiced&quot;&gt;一&lt;/p&gt;
+    &lt;p class=&quot;choice&quot;&gt;二&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;block&quot;&gt;一&lt;/div&gt;
+&lt;div class=&quot;block hide&quot;&gt;二&lt;/div&gt;
+jQuery代码:
+var $tab = $(&apos;.tab_menu p&apos;);
+$tab.click(function(){
+    var index = $tab.index(this);
+    $tab.removeClass(&apos;choiced&apos;).addClass(&apos;choice&apos;)
+        .eq(index).addClass(&apos;choiced&apos;);
+    $(&apos;.block&apos;).hide()
+        .eq(index).show();
+});
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/20/jQuery实例/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-Angular指令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -747,80 +923,9 @@ HTML： h1-h6、div、p、blockquote、form、table、ul、ol、dl、li、
 
 
   
-    <article id="post-word总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/23/word总结/">word总结</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/23/word总结/" class="archive-article-date">
-  	<time datetime="2017-06-23T11:39:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><pre><code>Ctrl+A  全选
-Ctrl+C  复制
-Ctrl+X  剪切
-Ctrl+V  粘贴
-Ctrl+Z  撤销
-Ctrl+Y  重做
-Ctrl+F  查找
-Ctrl+H  替换
-Ctrl+S  保存
-F12     另存为
-</code></pre>
-        
-          <a class="article-more-a" href="/2017/06/23/word总结/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">操作系统</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/23/word总结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -914,11 +1019,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -930,7 +1035,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">
