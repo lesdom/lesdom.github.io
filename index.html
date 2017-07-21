@@ -131,6 +131,73 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-jQuery之Ajax" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/21/jQuery之Ajax/">jQuery之Ajax</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/21/jQuery之Ajax/" class="archive-article-date">
+  	<time datetime="2017-07-21T03:40:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="最底层"><a href="#最底层" class="headerlink" title="最底层"></a>最底层</h2><p>$.ajax()</p>
+<p>结构：$.ajax(options)</p>
+<p>常用参数：</p>
+<table><br><thead><br><tr><br><th>参数</th><th>类型</th><th>说明</th><br></tr><br></thead><br><tbody><br><tr><br><td>url</td><td>String</td><td>发送请求的地址</td><br></tr><br><tr><br><td>type</td><td>String</td><td>请求方式(POST或GET)</td><br></tr><br><tr><br><td>timeout</td><td>Number</td><td>设置请求超时时间</td><br></tr><br></tbody><br></table>
+
+
+
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/21/jQuery之Ajax/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-jQuery实例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -167,109 +234,10 @@ $(&quot;#username&quot;).focus(function(){
 }).blur(function(){
     $(this).removeClass(&quot;focus&quot;);
 });
-</code></pre><p>2、复选框全选，全不选，反选</p>
-<p><strong>按钮</strong></p>
-<pre><code>&lt;input type=&quot;checkbox&quot; name=&quot;items&quot; value=&quot;一&quot; /&gt;一
-&lt;input type=&quot;checkbox&quot; name=&quot;items&quot; value=&quot;二&quot; /&gt;二
-&lt;input type=&quot;button&quot; id=&quot;checkedAll&quot; value=&quot;全选&quot; /&gt;
-&lt;input type=&quot;button&quot; id=&quot;checkedNo&quot; value=&quot;全不选&quot; /&gt;
-&lt;input type=&quot;button&quot; id=&quot;checkedRev&quot; value=&quot;反选&quot; /&gt;
-jQuery代码:
-$(&quot;#checkedAll&quot;).click(function(){
-    $(&quot;[name=items]:checkbox&quot;).prop(&quot;checked&quot;,true);
-});
-$(&quot;#checkedNo&quot;).click(function(){
-    $(&quot;[name=items]:checkbox&quot;).prop(&quot;checked&quot;,false);
-});
-$(&quot;#checkedRev&quot;).click(function(){
-    $(&quot;[name=items]:checkbox&quot;).each(function(){
-        $(this).prop(&quot;checked&quot;,!$(this).prop(&quot;checked&quot;));
-        //或this.checked=!this.checked;
-    });
-});
-</code></pre><p><strong>复选框</strong></p>
-<pre><code>&lt;input type=&quot;checkbox&quot; name=&quot;items&quot; value=&quot;一&quot; /&gt;一
-&lt;input type=&quot;checkbox&quot; name=&quot;items&quot; value=&quot;二&quot; /&gt;二
-&lt;input type=&quot;checkbox&quot; id=&quot;checkedAll&quot; value=&quot;全选/全不选&quot; /&gt;
-jQuery代码:
-$(&quot;#checkedAll&quot;).click(function(){
-    if(this.checked){
-        $(&quot;[name=items]:checkbox&quot;).prop(&quot;checked&quot;,true);
-    }else{
-        $(&quot;[name=items]:checkbox&quot;).prop(&quot;checked&quot;,false);
-    }
-});
-或
-$(&quot;#checkedAll&quot;).click(function(){
-    $(&quot;[name=items]:checkbox&quot;).prop(&quot;checked&quot;,this.checked);
-});
-</code></pre><p>将全选复选框和复选框组联系起来</p>
-<pre><code>$(&quot;[name=items]:checkbox&quot;).click(function(){
-    var flag=true;
-    $(&quot;[name=items]:checkbox&quot;).each(function(){
-        if(!this.checked){
-            flag=false;
-        }
-    });
-    $(&quot;#checkedAll&quot;).prop(&quot;checked&quot;,flag);
-});
-或
-$(&quot;[name=items]:checkbox&quot;).click(function(){
-    var $tmp=$(&quot;[name=items]:checkbox&quot;);
-    $(&quot;#checkedAll&quot;).prop(&quot;checked&quot;,$tmp.length==$tmp.filter(&quot;:checked&quot;).length);
-});
-</code></pre><p><strong>单组复选框全选</strong></p>
-<pre><code>&lt;input type=&quot;checkbox&quot; id=&quot;one&quot; class=&quot;group&quot; /&gt;组一
-&lt;input type=&quot;checkbox&quot; name=&quot;one&quot;/&gt;内容
-&lt;input type=&quot;checkbox&quot; name=&quot;one&quot;/&gt;内容
-&lt;input type=&quot;checkbox&quot; id=&quot;two&quot; class=&quot;group&quot; /&gt;组二    
-&lt;input type=&quot;checkbox&quot; name=&quot;two&quot; /&gt;内容
-&lt;input type=&quot;checkbox&quot; id=&quot;checkedAll&quot; value=&quot;全选/全不选&quot; /&gt;
-jQuery代码:
-$(&quot;.group&quot;).click(function(){
-    var groupId = $(this).attr(&quot;id&quot;);
-    if(this.checked){
-        $(&quot;[name=&quot; + groupId + &quot;]:checkbox&quot;).prop(&quot;checked&quot;,true);
-    }else{
-        $(&quot;[name=&quot; + groupId + &quot;]:checkbox&quot;).prop(&quot;checked&quot;,false);
-    }
-});
-</code></pre><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>1、选项卡</p>
-<pre><code>&lt;div class=&quot;tab_menu&quot;&gt;
-    &lt;p class=&quot;choiced&quot;&gt;一&lt;/p&gt;
-    &lt;p class=&quot;choice&quot;&gt;二&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;tab_box&quot;&gt;
-    &lt;div&gt;一&lt;/div&gt;
-    &lt;div class=&quot;hide&quot;&gt;二&lt;/div&gt;
-&lt;/div&gt;
-jQuery代码:
-var $tab = $(&apos;.tab_menu p&apos;);
-$tab.click(function(){
-    $(this).addClass(&apos;choiced&apos;)
-           .siblings().removeClass(&apos;choiced&apos;).addClass(&apos;choice&apos;);
-    var index = $tab.index(this);
-    $(&quot;.tab_box &gt; div&quot;)
-        .eq(index).show()
-        .siblings().hide();
-});
-</code></pre><p>或</p>
-<pre><code>&lt;div class=&quot;tab_menu&quot;&gt;
-    &lt;p class=&quot;choiced&quot;&gt;一&lt;/p&gt;
-    &lt;p class=&quot;choice&quot;&gt;二&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;block&quot;&gt;一&lt;/div&gt;
-&lt;div class=&quot;block hide&quot;&gt;二&lt;/div&gt;
-jQuery代码:
-var $tab = $(&apos;.tab_menu p&apos;);
-$tab.click(function(){
-    var index = $tab.index(this);
-    $tab.removeClass(&apos;choiced&apos;).addClass(&apos;choice&apos;)
-        .eq(index).addClass(&apos;choiced&apos;);
-    $(&apos;.block&apos;).hide()
-        .eq(index).show();
-});
 </code></pre>
+        
+          <a class="article-more-a" href="/2017/07/20/jQuery实例/#more">more >></a>
+        
       
 
       
@@ -855,74 +823,6 @@ jQuery 的 action() 执行对元素的操作
 
 
   
-    <article id="post-布局总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/28/布局总结/">布局总结</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/28/布局总结/" class="archive-article-date">
-  	<time datetime="2017-06-28T11:11:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><p>常用的标签就是<code>div</code>和<code>span</code>，配合使用<code>display</code>、<code>position</code>、<code>float</code>进行布局。</p>
-<h3 id="display"><a href="#display" class="headerlink" title="display"></a>display</h3><p><strong>block</strong>(块状元素)</p>
-<p>总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示；<br>宽度(width)、高度(height)、内边距(padding)和外边距(margin)都可控制。</p>
-<pre><code>HTML5：header、footer、section、article、aside、canvas、
-       audio、vedio、output
-HTML： h1-h6、div、p、blockquote、form、table、ul、ol、dl、li、
-       pre、hr、address、noscript
-</code></pre>
-        
-          <a class="article-more-a" href="/2017/06/28/布局总结/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/28/布局总结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1027,15 +927,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">互联网</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">

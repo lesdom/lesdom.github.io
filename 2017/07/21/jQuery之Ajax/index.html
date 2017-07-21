@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yearslater.me">
-  <title>如何使用搜索引擎（二） | Years</title>
+  <title>jQuery之Ajax | Years</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="通用网盘搜索: 盘多多网盘007搜啦呆木瓜麦库5p44鸵鸟哔哩">
-<meta name="keywords" content="互联网">
+  <meta name="description" content="最底层$.ajax() 结构：$.ajax(options) 常用参数： 参数类型说明urlString发送请求的地址typeString请求方式(POST或GET)timeoutNumber设置请求超时时间">
+<meta name="keywords" content="jQuery">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何使用搜索引擎（二）">
-<meta property="og:url" content="http://yearslater.me/2017/06/17/如何使用搜索引擎（二）/index.html">
+<meta property="og:title" content="jQuery之Ajax">
+<meta property="og:url" content="http://yearslater.me/2017/07/21/jQuery之Ajax/index.html">
 <meta property="og:site_name" content="Years">
-<meta property="og:description" content="通用网盘搜索: 盘多多网盘007搜啦呆木瓜麦库5p44鸵鸟哔哩">
-<meta property="og:updated_time" content="2017-06-18T13:37:58.469Z">
+<meta property="og:description" content="最底层$.ajax() 结构：$.ajax(options) 常用参数： 参数类型说明urlString发送请求的地址typeString请求方式(POST或GET)timeoutNumber设置请求超时时间">
+<meta property="og:updated_time" content="2017-07-21T05:50:12.767Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何使用搜索引擎（二）">
-<meta name="twitter:description" content="通用网盘搜索: 盘多多网盘007搜啦呆木瓜麦库5p44鸵鸟哔哩">
+<meta name="twitter:title" content="jQuery之Ajax">
+<meta name="twitter:description" content="最底层$.ajax() 结构：$.ajax(options) 常用参数： 参数类型说明urlString发送请求的地址typeString请求方式(POST或GET)timeoutNumber设置请求超时时间">
   
     <link rel="alternative" href="/atom.xml" title="Years" type="application/atom+xml">
   
@@ -134,58 +134,35 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-如何使用搜索引擎（二）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-jQuery之Ajax" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      如何使用搜索引擎（二）
+      jQuery之Ajax
     </h1>
   
 
         
-        <a href="/2017/06/17/如何使用搜索引擎（二）/" class="archive-article-date">
-  	<time datetime="2017-06-17T03:37:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-17</time>
+        <a href="/2017/07/21/jQuery之Ajax/" class="archive-article-date">
+  	<time datetime="2017-07-21T03:40:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h2><p>网盘搜索:<br></p>
-<p><a href="http://www.panduoduo.net/" target="_blank" rel="external">盘多多</a><br><br><a href="https://wangpan007.com/" target="_blank" rel="external">网盘007</a><br><br><a href="http://www.bdsola.com/newfile.php?Type=ALL" target="_blank" rel="external">搜啦</a><br><br><a href="http://www.daimugua.com/" target="_blank" rel="external">呆木瓜</a><br><br><a href="http://www.huisou.me/" target="_blank" rel="external">麦库</a><br><br><a href="http://www.5p44.com" target="_blank" rel="external">5p44</a><br><br><a href="http://www.tuoniao.me/" target="_blank" rel="external">鸵鸟</a><br><br><a href="http://www.biliworld.com/list/all/" target="_blank" rel="external">哔哩</a><br><br><a id="more"></a></p>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>识图搜索:谷歌和百度都支持使用图片搜索图片，搜索同一图片的其他尺寸。</p>
-<p>免费:</p>
-<p><a href="https://www.pexels.com/" target="_blank" rel="external">PEXELS</a></p>
-<p>付费:</p>
-<p><a href="https://500px.com/" target="_blank" rel="external">500PX</a></p>
-<p><a href="http://eput.com/" target="_blank" rel="external">Eput</a></p>
-<p>使用方法：点击查看你喜欢的图片(一定要点进去把图片的最大尺寸浏览一遍，否则缓存的可能是封面的小图)，按下<code>F12</code>(笔记本可能需要按<code>fn+f12</code>):Resources-&gt;Frames-&gt;Images,这个文件夹中存储了你浏览的图片，找到后右击：Open link in new tab,此时会打开一个新的网页，右击保存图片即可。</p>
-<h2 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h2><p>在你搜索的音乐名称后添加‘微盘’搜索词，比如</p>
-<pre><code>鸽子 宋冬野 微盘
-</code></pre><p><a href="http://www.51ape.com/" target="_blank" rel="external">无损音乐</a></p>
-<h2 id="影视"><a href="#影视" class="headerlink" title="影视"></a>影视</h2><p>在线:</p>
-<p><a href="http://www.yy6080.org/" target="_blank" rel="external">新视觉影院电脑</a></p>
-<p><a href="http://www.yy6080.cm" target="_blank" rel="external">新视觉影院手机</a></p>
-<p><a href="http://www.k8yy.com/" target="_blank" rel="external">看吧影院</a></p>
-<p><a href="http://www.b8yy.com/" target="_blank" rel="external">苏格影院</a></p>
-<p>下载:</p>
-<p><a href="https://moviejie.com/" target="_blank" rel="external">电影街</a></p>
-<p><a href="http://www.ygdy8.com/" target="_blank" rel="external">阳光电影</a></p>
-<p><a href="http://www.6vhao.com/" target="_blank" rel="external">6V电影网</a></p>
-<p><a href="http://www.66ys.tv/" target="_blank" rel="external">66影视</a></p>
-<p><a href="http://www.ibtzz.com/" target="_blank" rel="external">思享</a></p>
-<p><a href="http://www.dy2018.com/" target="_blank" rel="external">电影天堂</a></p>
-<p><a href="http://www.piaohua.com/" target="_blank" rel="external">飘花资源网</a></p>
-<p><a href="http://www.cnscg.org/" target="_blank" rel="external">圣城影视</a></p>
-<p><a href="http://www.ttmeiju.com/" target="_blank" rel="external">天天美剧</a></p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><a href="https://www.resilio.com/" target="_blank" rel="external">Resilio Sync官网</a></p>
-<p>下面是分享key的网站导航:</p>
-<p><a href="http://wherebt.com/" target="_blank" rel="external">Where BT</a></p>
-<p>(网站内有软件的下载安装使用教程)</p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>我只能说‘自己动手，丰衣足食’：<a href="https://www.zhihu.com/topic/19566656/top-answers" target="_blank" rel="external">传送门</a>。自己见到不错的网站收集起来就可以了，平时常用的也不过几个而已。</p>
+        <h2 id="最底层"><a href="#最底层" class="headerlink" title="最底层"></a>最底层</h2><p>$.ajax()</p>
+<p>结构：$.ajax(options)</p>
+<p>常用参数：</p>
+<table><br><thead><br><tr><br><th>参数</th><th>类型</th><th>说明</th><br></tr><br></thead><br><tbody><br><tr><br><td>url</td><td>String</td><td>发送请求的地址</td><br></tr><br><tr><br><td>type</td><td>String</td><td>请求方式(POST或GET)</td><br></tr><br><tr><br><td>timeout</td><td>Number</td><td>设置请求超时时间</td><br></tr><br></tbody><br></table>
+
+
+
+
+
 
       
 
@@ -230,7 +207,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">互联网</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
         		</li>
       		
 		</ul>
@@ -249,18 +226,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/06/17/且行且珍惜/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          且行且珍惜
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/06/15/如何使用搜索引擎/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">如何使用搜索引擎</div>
+    <a href="/2017/07/20/jQuery实例/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jQuery实例</div>
       <i class="icon-circle-right"></i>
     </a>
   

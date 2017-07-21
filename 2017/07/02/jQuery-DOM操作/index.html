@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yearslater.me/2017/07/02/jQuery-DOM操作/index.html">
 <meta property="og:site_name" content="Years">
 <meta property="og:description" content="文档处理创建$(html) 元素节点 var $node = $(&amp;quot;&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;&amp;quot;); 文本节点 var $textNode = $(&amp;quot;&amp;lt;div&amp;gt;文本节点&amp;lt;/div&amp;gt;&amp;quot;); 属性节点 var $attributeNode = $(&amp;quot;&amp;lt;div title=&amp;apos;属性&amp;apos;&amp;g">
-<meta property="og:updated_time" content="2017-07-11T06:59:03.381Z">
+<meta property="og:updated_time" content="2017-07-21T01:14:39.355Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery DOM操作">
 <meta name="twitter:description" content="文档处理创建$(html) 元素节点 var $node = $(&amp;quot;&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;&amp;quot;); 文本节点 var $textNode = $(&amp;quot;&amp;lt;div&amp;gt;文本节点&amp;lt;/div&amp;gt;&amp;quot;); 属性节点 var $attributeNode = $(&amp;quot;&amp;lt;div title=&amp;apos;属性&amp;apos;&amp;g">
@@ -185,6 +185,7 @@ $(&quot;A&quot;).wrapInner(&quot;B&quot;) 用B标签将A元素的子内容(包�
 $(&quot;A&quot;).unwrap()       将A元素的父级元素删除，保留自身(和同辈元素)在原来的位置
 </code></pre><h2 id="筛选"><a href="#筛选" class="headerlink" title="筛选"></a>筛选</h2><h3 id="过滤"><a href="#过滤" class="headerlink" title="过滤"></a>过滤</h3><pre><code>$(&quot;A&quot;).eq(index)  取得索引为index的A元素(从0开始)
 $(&quot;A&quot;).filter()   筛选出与指定表达式或函数匹配的元素集合
+$(&quot;A&quot;).is(&quot;:checked&quot;) 用于查看选择的元素A是否匹配选择器
 ...(待续)
 $(&quot;A&quot;).first()  获取匹配A元素集合中第一个元素
 $(&quot;A&quot;).last()   获取匹配A元素集合中最后一个元素
@@ -205,6 +206,8 @@ $(&quot;A&quot;).parent()      取得A元素的父元素
 </code></pre><h2 id="捕获"><a href="#捕获" class="headerlink" title="捕获"></a>捕获</h2><h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><pre><code>$(&quot;A&quot;).attr(&quot;title&quot;)            获取A元素的title属性
 $(&quot;A&quot;).attr(&quot;title&quot;,&quot;example&quot;)  设置A元素的title属性
 $(&quot;A&quot;).removeAttr(&quot;title&quot;)      删除A元素的title属性
+
+$(&quot;A&quot;).prop(&quot;checked&quot;,true)     用于表单元素设置checked，disabled
 </code></pre><h3 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a>其他</h3><pre><code>$(&quot;A&quot;).html()                获取A元素的HTML代码
 $(&quot;A&quot;).html(&quot;&lt;p&gt;hello&lt;/p&gt;&quot;)  设置A元素的HTML代码    
 $(&quot;A&quot;).text()                获取A元素的文本内容
@@ -222,6 +225,8 @@ $(&quot;A&quot;).css({
        &quot;fontSize&quot;：&quot;30px&quot;
       })               设置A元素颜色为蓝色,字号30px
 
+$(&quot;A&quot;).height()  获取A元素的高度值
+$(&quot;A&quot;).width()   获取A元素宽度值
 $(&quot;A&quot;).height(&quot;10rem&quot;) 设置A元素的高度值为10rem
 $(&quot;A&quot;).width(&quot;10rem&quot;)  设置A元素的宽度值为10rem
 </code></pre>
@@ -414,15 +419,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">互联网</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">
