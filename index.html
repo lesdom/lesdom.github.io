@@ -154,13 +154,23 @@
         <h2 id="最底层"><a href="#最底层" class="headerlink" title="最底层"></a>最底层</h2><p>$.ajax()</p>
 <p>结构：$.ajax(options)</p>
 <p>常用参数：</p>
-<table><br><thead><br><tr><br><th>参数</th><th>类型</th><th>说明</th><br></tr><br></thead><br><tbody><br><tr><br><td>url</td><td>String</td><td>发送请求的地址</td><br></tr><br><tr><br><td>type</td><td>String</td><td>请求方式(POST或GET)</td><br></tr><br><tr><br><td>timeout</td><td>Number</td><td>设置请求超时时间</td><br></tr><br></tbody><br></table>
+<table><br><thead><br><tr><br><th>参数</th><th>类型</th><th>说明</th><br></tr><br></thead><br><tbody><br><tr><br><td>url</td><td>String</td><td>发送请求的地址</td><br></tr><br><tr><br><td>type</td><td>String</td><td>请求方式(post或get)</td><br></tr><br><tr><br><td>timeout</td><td>Number</td><td>设置请求超时时间</td><br></tr><br><tr><br><td>data</td><td>Object或String</td><td>发送到服务器的数据</td><br></tr><br><tr><br><td>dataType</td><td>String</td><td>预期服务器返回的数据类型，如text,xml,html,script,json,jsonp</td><br></tr><br><tr><br><td>beforeSend</td><td>Function</td><td>发送请求前可以修改XMLHttpRequest对象的函数</td><br></tr><br><tr><br><td>complete</td><td>Function</td><td>请求完成后调用的回调函数</td><br></tr><br><tr><br><td>success</td><td>Function</td><td>请求成功后调用的回调函数</td><br></tr><br><tr><br><td>error</td><td>Function</td><td>请求失败时调用的回调函数</td><br></tr><br><tr><br><td>global</td><td>Boolean</td><td>表示是否触发全局Ajax事件，默认为true</td><br></tr><br><tr><br><td>async</td><td>Boolean</td><td>所有请求均为异步请求，默认为true，如需发送同步请求，设置为false</td><br></tr><br><tr><br><td>cache</td><td>Boolean</td><td>默认为true,当dataType为script和jsonp时，默认为false，设置为false将不会从浏览器缓存中加载请求信息</td><br></tr><br></tbody><br></table>
 
-
-
-
-
-
+<p>示例：</p>
+<pre><code>$.ajax({
+    type: &apos;post&apos;,
+    url: url,
+    data: {
+        &apos;userId&apos;:&quot;游客&quot;,
+        &apos;sysCode&apos;: COMMON.sysCode
+    },
+    success:function(resp){
+        if(resp.status == &apos;OK&apos;){
+            //do something
+        }
+    }
+})
+</code></pre>
       
 
       
@@ -219,7 +229,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h2><p>1、聚焦失焦</p>
-<pre><code>&lt;input id=&quot;username&quot; type=&quot;text&quot;&gt;
+<pre><code>&lt;input id=&quot;search&quot; type=&quot;text&quot; value=&quot;请输入&quot;&gt;
 css代码:
 #username {
     border: 1px solid #d4d4d4;
@@ -229,10 +239,20 @@ css代码:
     background-color: #fcc;
 }
 jQuery代码:
-$(&quot;#username&quot;).focus(function(){
+$(&quot;#search&quot;).focus(function(){
     $(this).addClass(&quot;focus&quot;);
+    if($(this).val() == this.defaultValue){
+        $(this).val(&quot;&quot;);
+    }
 }).blur(function(){
     $(this).removeClass(&quot;focus&quot;);
+    if($(this).val() == &quot;&quot;){
+        $(this).val(this.defaultValue);
+    }
+}).keyup(function(e){
+    if(e.which == 13){
+        alert(&quot;回车提交表单&quot;);
+    }
 });
 </code></pre>
         
@@ -927,15 +947,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">互联网</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">

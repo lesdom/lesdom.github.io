@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yearslater.me">
   <title>jQuery之Ajax | Years</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最底层$.ajax() 结构：$.ajax(options) 常用参数： 参数类型说明urlString发送请求的地址typeString请求方式(POST或GET)timeoutNumber设置请求超时时间">
+  <meta name="description" content="最底层$.ajax() 结构：$.ajax(options) 常用参数： 参数类型说明urlString发送请求的地址typeString请求方式(post或get)timeoutNumber设置请求超时时间dataObject或String发送到服务器的数据dataTypeString预期服务器返回的数据类型，如text,xml,html,script,json,jsonpbeforeSendF">
 <meta name="keywords" content="jQuery">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery之Ajax">
 <meta property="og:url" content="http://yearslater.me/2017/07/21/jQuery之Ajax/index.html">
 <meta property="og:site_name" content="Years">
-<meta property="og:description" content="最底层$.ajax() 结构：$.ajax(options) 常用参数： 参数类型说明urlString发送请求的地址typeString请求方式(POST或GET)timeoutNumber设置请求超时时间">
-<meta property="og:updated_time" content="2017-07-21T05:50:12.767Z">
+<meta property="og:description" content="最底层$.ajax() 结构：$.ajax(options) 常用参数： 参数类型说明urlString发送请求的地址typeString请求方式(post或get)timeoutNumber设置请求超时时间dataObject或String发送到服务器的数据dataTypeString预期服务器返回的数据类型，如text,xml,html,script,json,jsonpbeforeSendF">
+<meta property="og:updated_time" content="2017-07-21T08:52:27.505Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery之Ajax">
-<meta name="twitter:description" content="最底层$.ajax() 结构：$.ajax(options) 常用参数： 参数类型说明urlString发送请求的地址typeString请求方式(POST或GET)timeoutNumber设置请求超时时间">
+<meta name="twitter:description" content="最底层$.ajax() 结构：$.ajax(options) 常用参数： 参数类型说明urlString发送请求的地址typeString请求方式(post或get)timeoutNumber设置请求超时时间dataObject或String发送到服务器的数据dataTypeString预期服务器返回的数据类型，如text,xml,html,script,json,jsonpbeforeSendF">
   
     <link rel="alternative" href="/atom.xml" title="Years" type="application/atom+xml">
   
@@ -157,13 +157,23 @@
         <h2 id="最底层"><a href="#最底层" class="headerlink" title="最底层"></a>最底层</h2><p>$.ajax()</p>
 <p>结构：$.ajax(options)</p>
 <p>常用参数：</p>
-<table><br><thead><br><tr><br><th>参数</th><th>类型</th><th>说明</th><br></tr><br></thead><br><tbody><br><tr><br><td>url</td><td>String</td><td>发送请求的地址</td><br></tr><br><tr><br><td>type</td><td>String</td><td>请求方式(POST或GET)</td><br></tr><br><tr><br><td>timeout</td><td>Number</td><td>设置请求超时时间</td><br></tr><br></tbody><br></table>
+<table><br><thead><br><tr><br><th>参数</th><th>类型</th><th>说明</th><br></tr><br></thead><br><tbody><br><tr><br><td>url</td><td>String</td><td>发送请求的地址</td><br></tr><br><tr><br><td>type</td><td>String</td><td>请求方式(post或get)</td><br></tr><br><tr><br><td>timeout</td><td>Number</td><td>设置请求超时时间</td><br></tr><br><tr><br><td>data</td><td>Object或String</td><td>发送到服务器的数据</td><br></tr><br><tr><br><td>dataType</td><td>String</td><td>预期服务器返回的数据类型，如text,xml,html,script,json,jsonp</td><br></tr><br><tr><br><td>beforeSend</td><td>Function</td><td>发送请求前可以修改XMLHttpRequest对象的函数</td><br></tr><br><tr><br><td>complete</td><td>Function</td><td>请求完成后调用的回调函数</td><br></tr><br><tr><br><td>success</td><td>Function</td><td>请求成功后调用的回调函数</td><br></tr><br><tr><br><td>error</td><td>Function</td><td>请求失败时调用的回调函数</td><br></tr><br><tr><br><td>global</td><td>Boolean</td><td>表示是否触发全局Ajax事件，默认为true</td><br></tr><br><tr><br><td>async</td><td>Boolean</td><td>所有请求均为异步请求，默认为true，如需发送同步请求，设置为false</td><br></tr><br><tr><br><td>cache</td><td>Boolean</td><td>默认为true,当dataType为script和jsonp时，默认为false，设置为false将不会从浏览器缓存中加载请求信息</td><br></tr><br></tbody><br></table>
 
-
-
-
-
-
+<p>示例：</p>
+<pre><code>$.ajax({
+    type: &apos;post&apos;,
+    url: url,
+    data: {
+        &apos;userId&apos;:&quot;游客&quot;,
+        &apos;sysCode&apos;: COMMON.sysCode
+    },
+    success:function(resp){
+        if(resp.status == &apos;OK&apos;){
+            //do something
+        }
+    }
+})
+</code></pre>
       
 
       
@@ -344,15 +354,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">互联网</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">

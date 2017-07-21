@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yearslater.me">
   <title>jQuery实例 | Years</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="表单1、聚焦失焦 &amp;lt;input id=&amp;quot;username&amp;quot; type=&amp;quot;text&amp;quot;&amp;gt; css代码: #username {     border: 1px solid #d4d4d4; } .focus {     border: 1px solid #0287d2;     background-color: #fcc; } jQuery代码:">
+  <meta name="description" content="表单1、聚焦失焦 &amp;lt;input id=&amp;quot;search&amp;quot; type=&amp;quot;text&amp;quot; value=&amp;quot;请输入&amp;quot;&amp;gt; css代码: #username {     border: 1px solid #d4d4d4; } .focus {     border: 1px solid #0287d2;     background-colo">
 <meta name="keywords" content="jQuery">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery实例">
 <meta property="og:url" content="http://yearslater.me/2017/07/20/jQuery实例/index.html">
 <meta property="og:site_name" content="Years">
-<meta property="og:description" content="表单1、聚焦失焦 &amp;lt;input id=&amp;quot;username&amp;quot; type=&amp;quot;text&amp;quot;&amp;gt; css代码: #username {     border: 1px solid #d4d4d4; } .focus {     border: 1px solid #0287d2;     background-color: #fcc; } jQuery代码:">
-<meta property="og:updated_time" content="2017-07-21T00:55:15.786Z">
+<meta property="og:description" content="表单1、聚焦失焦 &amp;lt;input id=&amp;quot;search&amp;quot; type=&amp;quot;text&amp;quot; value=&amp;quot;请输入&amp;quot;&amp;gt; css代码: #username {     border: 1px solid #d4d4d4; } .focus {     border: 1px solid #0287d2;     background-colo">
+<meta property="og:updated_time" content="2017-07-21T11:39:04.147Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery实例">
-<meta name="twitter:description" content="表单1、聚焦失焦 &amp;lt;input id=&amp;quot;username&amp;quot; type=&amp;quot;text&amp;quot;&amp;gt; css代码: #username {     border: 1px solid #d4d4d4; } .focus {     border: 1px solid #0287d2;     background-color: #fcc; } jQuery代码:">
+<meta name="twitter:description" content="表单1、聚焦失焦 &amp;lt;input id=&amp;quot;search&amp;quot; type=&amp;quot;text&amp;quot; value=&amp;quot;请输入&amp;quot;&amp;gt; css代码: #username {     border: 1px solid #d4d4d4; } .focus {     border: 1px solid #0287d2;     background-colo">
   
     <link rel="alternative" href="/atom.xml" title="Years" type="application/atom+xml">
   
@@ -155,7 +155,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h2><p>1、聚焦失焦</p>
-<pre><code>&lt;input id=&quot;username&quot; type=&quot;text&quot;&gt;
+<pre><code>&lt;input id=&quot;search&quot; type=&quot;text&quot; value=&quot;请输入&quot;&gt;
 css代码:
 #username {
     border: 1px solid #d4d4d4;
@@ -165,10 +165,20 @@ css代码:
     background-color: #fcc;
 }
 jQuery代码:
-$(&quot;#username&quot;).focus(function(){
+$(&quot;#search&quot;).focus(function(){
     $(this).addClass(&quot;focus&quot;);
+    if($(this).val() == this.defaultValue){
+        $(this).val(&quot;&quot;);
+    }
 }).blur(function(){
     $(this).removeClass(&quot;focus&quot;);
+    if($(this).val() == &quot;&quot;){
+        $(this).val(this.defaultValue);
+    }
+}).keyup(function(e){
+    if(e.which == 13){
+        alert(&quot;回车提交表单&quot;);
+    }
 });
 </code></pre><a id="more"></a>
 <p>2、复选框全选，全不选，反选</p>
@@ -523,15 +533,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">互联网</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">
