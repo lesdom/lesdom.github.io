@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yearslater.me">
-  <title>Emmet语法 | Years</title>
+  <title>使用CSS实现轮播图 | Years</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本一般编辑器都支持emmet插件的，使用的快捷键是Tab 元素Emmet 没有预定义标签集合，所以可以用任意单词来生成对应的标签： div → &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;, foo → &amp;lt;foo&amp;gt;&amp;lt;/foo&amp;gt;">
+  <meta name="description" content="基本知识animation属性 语法： animation: name duration timing-function delay iteration-count direction 参数解释： animation-name             属性为 @keyframes 动画指定名称 animation-duration         属性定义动画完成一个周期需要多少秒或毫秒 anim">
 <meta name="keywords" content="前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Emmet语法">
-<meta property="og:url" content="http://yearslater.me/2017/06/20/Emmet语法/index.html">
+<meta property="og:title" content="使用CSS实现轮播图">
+<meta property="og:url" content="http://yearslater.me/2017/07/22/使用CSS实现轮播图/index.html">
 <meta property="og:site_name" content="Years">
-<meta property="og:description" content="基本一般编辑器都支持emmet插件的，使用的快捷键是Tab 元素Emmet 没有预定义标签集合，所以可以用任意单词来生成对应的标签： div → &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;, foo → &amp;lt;foo&amp;gt;&amp;lt;/foo&amp;gt;">
-<meta property="og:updated_time" content="2017-06-20T12:47:30.244Z">
+<meta property="og:description" content="基本知识animation属性 语法： animation: name duration timing-function delay iteration-count direction 参数解释： animation-name             属性为 @keyframes 动画指定名称 animation-duration         属性定义动画完成一个周期需要多少秒或毫秒 anim">
+<meta property="og:updated_time" content="2017-07-22T06:34:13.752Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Emmet语法">
-<meta name="twitter:description" content="基本一般编辑器都支持emmet插件的，使用的快捷键是Tab 元素Emmet 没有预定义标签集合，所以可以用任意单词来生成对应的标签： div → &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;, foo → &amp;lt;foo&amp;gt;&amp;lt;/foo&amp;gt;">
+<meta name="twitter:title" content="使用CSS实现轮播图">
+<meta name="twitter:description" content="基本知识animation属性 语法： animation: name duration timing-function delay iteration-count direction 参数解释： animation-name             属性为 @keyframes 动画指定名称 animation-duration         属性定义动画完成一个周期需要多少秒或毫秒 anim">
   
     <link rel="alternative" href="/atom.xml" title="Years" type="application/atom+xml">
   
@@ -134,184 +134,130 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Emmet语法" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-使用CSS实现轮播图" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Emmet语法
+      使用CSS实现轮播图
     </h1>
   
 
         
-        <a href="/2017/06/20/Emmet语法/" class="archive-article-date">
-  	<time datetime="2017-06-20T12:26:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-20</time>
+        <a href="/2017/07/22/使用CSS实现轮播图/" class="archive-article-date">
+  	<time datetime="2017-07-22T03:37:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><p>一般编辑器都支持emmet插件的，使用的快捷键是<code>Tab</code></p>
-<h3 id="元素"><a href="#元素" class="headerlink" title="元素"></a>元素</h3><p>Emmet 没有预定义标签集合，所以可以用任意单词来生成对应的标签：</p>
-<pre><code>div → &lt;div&gt;&lt;/div&gt;, foo → &lt;foo&gt;&lt;/foo&gt;
+        <h2 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h2><p><strong>animation属性</strong></p>
+<p>语法：</p>
+<pre><code>animation: name duration timing-function delay iteration-count direction
+</code></pre><p>参数解释：</p>
+<pre><code>animation-name             属性为 @keyframes 动画指定名称
+animation-duration         属性定义动画完成一个周期需要多少秒或毫秒
+animation-timing-function  指定动画将如何完成一个周期
+    参数值：
+    linear      动画从头到尾的速度是相同的
+    ease        动画以低速开始，然后加快，在结束前变慢(默认)
+    ease-in     动画以低速开始
+    ease-out    动画以低速结束
+    ease-in-out 动画以低速开始和结束
+animation-delay           属性定义动画什么时候开始，可延迟可跳过
+animation-iteration-count 属性定义动画应该播放多少次
+    参数值：
+    infinite  永远
+    number    数字
+animation-direction 属性定义是否循环交替反向播放动画
+    参数值：
+    normal     动画按正常播放
+    reverse    动画反向播放
+    alternate  动画在奇数次（1、3...）正向播放，在偶数次（2、4...）反向播放
+    alternate-reverse  动画在奇数次反向播放，在偶数次正向播放
 </code></pre><a id="more"></a>
-<h3 id="嵌套操作符"><a href="#嵌套操作符" class="headerlink" title="嵌套操作符"></a>嵌套操作符</h3><table>
-<thead>
-<tr>
-<th>说明</th>
-<th>符号</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>子元素</td>
-<td>&gt;</td>
-</tr>
-<tr>
-<td>兄弟元素</td>
-<td>+</td>
-</tr>
-<tr>
-<td>返回上层</td>
-<td>^</td>
-</tr>
-<tr>
-<td>乘法</td>
-<td>*</td>
-</tr>
-<tr>
-<td>分组</td>
-<td>()</td>
-</tr>
-</tbody>
-</table>
-<h3 id="属性操作符"><a href="#属性操作符" class="headerlink" title="属性操作符"></a>属性操作符</h3><table>
-<thead>
-<tr>
-<th>说明</th>
-<th>符号</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ID</td>
-<td>#</td>
-</tr>
-<tr>
-<td>类</td>
-<td>.</td>
-</tr>
-<tr>
-<td>自定义属性</td>
-<td>[name=value]</td>
-</tr>
-<tr>
-<td>编号</td>
-<td>$</td>
-</tr>
-<tr>
-<td>降序</td>
-<td>@-</td>
-</tr>
-<tr>
-<td>改变起点</td>
-<td>@N</td>
-</tr>
-<tr>
-<td>文本</td>
-<td>{}</td>
-</tr>
-</tbody>
-</table>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>输入<code>ul#nav&gt;li.item$*4&gt;a{item $}</code>按下<code>Tab</code>生成</p>
-<pre><code>&lt;ul id=&quot;nav&quot;&gt;
-    &lt;li class=&quot;item1&quot;&gt;&lt;a href=&quot;&quot;&gt;item 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;item2&quot;&gt;&lt;a href=&quot;&quot;&gt;item 2&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;item3&quot;&gt;&lt;a href=&quot;&quot;&gt;item 3&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;item4&quot;&gt;&lt;a href=&quot;&quot;&gt;item 4&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre><h3 id="假文"><a href="#假文" class="headerlink" title="假文"></a>假文</h3><p>输入<code>p&gt;lorem</code>生成</p>
-<pre><code>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quo esse voluptatibus accusantium dicta. Distinctio, veniam, iste. Nesciunt tenetur ad repellendus ducimus pariatur excepturi, vero at recusandae, adipisci porro error.&lt;/p&gt;
-</code></pre><p>可以指定字数，比如输入<code>p&gt;lorem10</code>生成10 字数的假文</p>
-<pre><code>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, facilis.&lt;/p&gt;
-</code></pre><h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h3 id="宽高"><a href="#宽高" class="headerlink" title="宽高"></a>宽高</h3><pre><code>width: ;      w
-height: ;     h
-max-width: ;  maw
-max-height: ; mah
-min-width: ;  miw
-min-height: ; mih
-</code></pre><h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><pre><code>font-size: ;         fz
-font-weight: ;       fw
-font-weight: normal; fw:n
-font-weight: bold;   fw:b
-</code></pre><h3 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h3><pre><code>color: #000;              c
-color: rgb(0, 0, 0);      c:r
-color: rgba(0, 0, 0, .5); c:ra
-opacity: ;                op
-</code></pre><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><pre><code>background-color: #fff;  bgc
-</code></pre><h3 id="边线"><a href="#边线" class="headerlink" title="边线"></a>边线</h3><pre><code>border: ;               bd
-border: 1px solid #000; bd+
-border: none;           bd:n
+<p><strong>@keyframes规则</strong></p>
+<p>使用@keyframes规则，你可以创建动画，通过逐步改变从一个CSS样式设定到另一个。</p>
+<p>举个例子：将一个div元素逐渐移动200px</p>
+<pre><code>&lt;div id=&quot;demo&quot;&gt;&lt;/div&gt;
+css代码：
+#demo{
+    width:100px;
+    height:100px;
+    background:red;
+    position:relative;
+    /*动画名称，时长，次数*/
+    animation:mymove 5s infinite;
+}
+@keyframes mymove
+{    
+    from {top:0px;}
+    to {top:200px;}
+}
+</code></pre><p>另外一种写法：<br>通过百分比(随意定)来描述每个阶段该元素的动态,0%就是上面说的from，100%就是to。动画效果更丰富，浏览器支持更佳。</p>
+<pre><code>@keyframes mymove
+{
+    0%   {top:0px;}
+    25%  {top:200px;}
+    75%  {top:50px}
+    100% {top:100px;}
+}
+</code></pre><h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><pre><code>&lt;div class=&quot;loop-wrap&quot;&gt;
+    &lt;div class=&quot;loop-container&quot;&gt;
+        &lt;img src=&quot;img/1.jpg&quot; alt=&quot;&quot; class=&quot;loop-image&quot; /&gt;
+        &lt;img src=&quot;img/2.jpg&quot; alt=&quot;&quot; class=&quot;loop-image&quot; /&gt;
+        &lt;img src=&quot;img/3.jpg&quot; alt=&quot;&quot; class=&quot;loop-image&quot; /&gt;
+        &lt;img src=&quot;img/4.jpg&quot; alt=&quot;&quot; class=&quot;loop-image&quot; /&gt;
+        &lt;img src=&quot;img/5.jpg&quot; alt=&quot;&quot; class=&quot;loop-image&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p>.loop-wrap 是主容器<br><br>.loop-container 是承载内部图片的子容器<br><br>.loop-image 是图片内容，如果需要显示其他内容，可以自定义</p>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><pre><code>.loop-wrap{
+    position: relative;
+    width: 500px;
+    height: 300px;
+    margin: 100px auto;
+    /*溢出隐藏，子容器宽或高大于主容器*/
+    overflow: hidden;
+}
+.loop-container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 500%;
+    height: 100%;
+    /*不设置此项图片会有白边*/
+    font-size: 0;
+    animation: loop 10s linear infinite;
+}
+/*轮播项与主容器宽高应一致*/
+.loop-image{
+    width: 500px;
+    height: 300px;
+}
+/*轮播5张,单张应为20%,设置单张切换动画耗时(5%)，停留(15%)*/
+@keyframes loop{
+    0% { transform: translateX(0); }
+    15% { transform: translateX(0); }
+    /*向x轴的负方向(左)移动自身宽度的20%*/
+    20% { transform: translateX(-20%); }
+    35% { transform: translateX(-20%); }
 
-border-top: ;     bt
-border-bottom: ;  bb
-border-left: ;    bl
-border-right: ;   br
-</code></pre><h3 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h3><pre><code>text-align: left;    ta
-text-align: center;  ta:c
-text-align: left;    ta:l
-text-align: right;   ta:r
-text-align: justify; ta:j
+    40% { transform: translateX(-40%); }
+    55% { transform: translateX(-40%); }
 
-text-indent: ;           ti
-vertical-align: middle;  va:m
-</code></pre><h3 id="内外间距"><a href="#内外间距" class="headerlink" title="内外间距"></a>内外间距</h3><pre><code>margin: ;         m
-margin: auto;     m:a
-margin-top: ;     mt
-margin-bottom: ;  mb
-margin-left: ;    ml
-margin-right: ;   mr
+    60% { transform: translateX(-60%); }
+    75% { transform: translateX(-60%); }
 
-padding: ;        p
-padding-top: ;    pt
-padding-bottom: ; pb
-padding-left: ;   pl
-padding-right: ;  pr
-</code></pre><h3 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h3><pre><code>position: relative; pos
-position: absolute; pos:a
-position: relative; pos:r
-position: fixed;    pos:f
-
-top: ;     t
-bottom: ;  b
-left: ;    l
-right: ;   r
-z-index: ; z
-
-float: left;  fl
-float: none;  fl:n
-float: left;  fl:l
-float: right; fl:r
-
-clear: both;  cl
-clear: none;  cl:n
-clear: left;  cl:l
-clear: right; cl:r
-clear: both;  cl:b
-
-display: block;         d
-display: none;          d:n
-display: block;         d:b
-display: inline;        d:i
-display: inline-block;  d:ib
-
-overflow: hidden; oh
-</code></pre><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://yanxyz.github.io/emmet-docs/" target="_blank" rel="external">Emmet 中文文档</a></p>
-<p><a href="http://yanxyz.github.io/emmet-docs/cheat-sheet/" target="_blank" rel="external">Emmet cheatsheet</a></p>
-
+    80% { transform: translateX(-80%); }
+    95% { transform: translateX(-80%); }
+    /*复位第一张图片，不加百分比是定义坐标*/
+    100% { transform: translateX(0); }
+}
+</code></pre>
       
 
       
@@ -374,18 +320,9 @@ overflow: hidden; oh
   
 <nav id="article-nav">
   
-    <a href="/2017/06/21/Hbuilder使用指南/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hbuilder使用指南
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/06/19/Windows操作配置/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Windows操作配置</div>
+    <a href="/2017/07/21/jQuery之Ajax/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jQuery之Ajax</div>
       <i class="icon-circle-right"></i>
     </a>
   

@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yearslater.me/2017/06/30/jQuery基础知识/index.html">
 <meta property="og:site_name" content="Years">
 <meta property="og:description" content="环境配置在HTML页面中引入jQuery库文件的位置即可，通常在&amp;lt;/body&amp;gt;后面，下面使用了BootCDN的地址。 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt;&amp;lt;/body&amp;gt; &amp;lt;script src=&amp;quot;//cdn.bootcss.com/jquery/2.">
-<meta property="og:updated_time" content="2017-06-30T03:31:50.934Z">
+<meta property="og:updated_time" content="2017-07-21T13:16:51.680Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery基础知识">
 <meta name="twitter:description" content="环境配置在HTML页面中引入jQuery库文件的位置即可，通常在&amp;lt;/body&amp;gt;后面，下面使用了BootCDN的地址。 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt;&amp;lt;/body&amp;gt; &amp;lt;script src=&amp;quot;//cdn.bootcss.com/jquery/2.">
@@ -203,6 +203,27 @@ var dom = $jq.get(0);
 <p>使用$()把DOM对象包装起来</p>
 <pre><code>var dom = document.getElementById(&quot;example&quot;);
 var $jq = $(dom);
+</code></pre><h2 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h2><p>1、使用id选择器</p>
+<pre><code>使用id来定位DOM元素,$(&quot;#id&quot;)将直接调用本地方法document.getElementById(id)。
+如果无法直接定位，再考虑使用find()方法，如 $(&quot;#id&quot;).find(&quot;div&quot;)
+</code></pre><p>2、缓存对象</p>
+<pre><code>不要让相同的选择器在代码里出现多次
+</code></pre><p>3、减少DOM操作</p>
+<pre><code>尽可能的减少DOM操作，比如将元素字符串拼接好再插入文档
+</code></pre><p>4、事件代理</p>
+<pre><code>多个子元素的点击事件应该绑定到父节点上，通过event.target获取当前触发事件的元素，如
+$(&quot;#parent&quot;).click(function(e){
+    var $clicked = $(e.target);
+    $clicked.css(&apos;color&apos;,&apos;red&apos;);
+});
+或
+$(&quot;#parent&quot;).on(&quot;click&quot;,&quot;.son&quot;,function(){
+    $(this).css(&apos;color&apos;,&apos;red&apos;);
+});
+</code></pre><p>5、使用原生JavaScript方法</p>
+<pre><code>尽量使用原生方法，比如
+将$(this).css(&apos;color&apos;,&apos;red&apos;);优化为this.style.color = &quot;red&quot;;
+将$jQuery.is(&quot;:checked&quot;)优化为dom.checked
 </code></pre>
       
 
@@ -385,19 +406,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+                <a href="javascript:void(0)" class="js-tag color4">互联网</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">互联网</a>
+                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -406,6 +423,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
