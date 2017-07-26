@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yearslater.me">
-  <title>jQuery选择器 | Years</title>
+  <title>Archives: 2017/7 | Years</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本选择器#id      根据给定的id匹配一个元素 .class   根据给定的类名匹配元素 element  根据给定的元素名匹配元素 *        匹配所有元素 selector1，selector2... 将每一个选择器匹配到的元素合并后一起返回  $(this)  选取当前 HTML 元素">
-<meta name="keywords" content="jQuery">
-<meta property="og:type" content="article">
-<meta property="og:title" content="jQuery选择器">
-<meta property="og:url" content="http://yearslater.me/2017/07/01/jQuery选择器/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Years">
+<meta property="og:url" content="http://yearslater.me/archives/2017/07/page/2/index.html">
 <meta property="og:site_name" content="Years">
-<meta property="og:description" content="基本选择器#id      根据给定的id匹配一个元素 .class   根据给定的类名匹配元素 element  根据给定的元素名匹配元素 *        匹配所有元素 selector1，selector2... 将每一个选择器匹配到的元素合并后一起返回  $(this)  选取当前 HTML 元素">
-<meta property="og:updated_time" content="2017-07-01T14:17:16.287Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQuery选择器">
-<meta name="twitter:description" content="基本选择器#id      根据给定的id匹配一个元素 .class   根据给定的类名匹配元素 element  根据给定的元素名匹配元素 *        匹配所有元素 selector1，selector2... 将每一个选择器匹配到的元素合并后一起返回  $(this)  选取当前 HTML 元素">
+<meta name="twitter:title" content="Years">
   
     <link rel="alternative" href="/atom.xml" title="Years" type="application/atom+xml">
   
@@ -134,122 +129,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-jQuery选择器" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      jQuery选择器
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/07/02/jQuery-DOM操作/" class="archive-article-date">
+  	<time datetime="2017-07-02T11:15:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-02</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/07/02/jQuery-DOM操作/">jQuery DOM操作</a>
     </h1>
   
 
-        
-        <a href="/2017/07/01/jQuery选择器/" class="archive-article-date">
-  	<time datetime="2017-07-01T12:18:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h2><pre><code>#id      根据给定的id匹配一个元素
-.class   根据给定的类名匹配元素
-element  根据给定的元素名匹配元素
-*        匹配所有元素
-selector1，selector2... 将每一个选择器匹配到的元素合并后一起返回
-
-$(this)  选取当前 HTML 元素
-</code></pre><a id="more"></a>
-<h2 id="层级选择器"><a href="#层级选择器" class="headerlink" title="层级选择器"></a>层级选择器</h2><pre><code>ancestor descendant  在给定的祖先元素下匹配所有的后代元素
-parent&gt;child         在给定的父元素下匹配所有的子元素
-prev+next            匹配紧接在prev元素后的相邻同辈元素
-prev~siblings        匹配prev元素之后的所有同辈元素
-</code></pre><h2 id="过滤选择器"><a href="#过滤选择器" class="headerlink" title="过滤选择器"></a>过滤选择器</h2><h3 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h3><pre><code>:first  匹配找到的第一个元素
-:last   匹配找到的最后一个元素
-:even   匹配所有索引值为偶数的元素，从0开始计数
-:odd    匹配所有索引值为奇数的元素，从0开始计数
-:not(selector)  去除所有与给定选择器匹配的元素
-:eq(index)  匹配一个索引等于index的元素
-:gt(index)  匹配所有索引大于index的元素
-:lt(index)  匹配所有索引小于index的元素
-:header     匹配所有标题元素
-:animated   匹配所有正在执行动画的元素
-:focus      匹配当前获取焦点的元素
-</code></pre><h3 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h3><pre><code>:contains(text)  匹配含有文本内容为&quot;text&quot;的元素
-:empty           匹配所有不包含子元素或者文本的空元素
-:has(selector)   匹配含有选择器所匹配的元素的元素
-:parent          匹配含有子元素或者文本的元素
-</code></pre><h3 id="可见性"><a href="#可见性" class="headerlink" title="可见性"></a>可见性</h3><pre><code>:hidden   匹配所有的不可见元素
-:visible  匹配所有的可见元素
-</code></pre><h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><pre><code>[attribute]  匹配包含给定属性的元素
-[attribute=value]   匹配属性的值为value的元素
-[attribute!=value]  匹配属性的值不等于value的元素
-[attribute^=value]  匹配属性的值以value开始的元素
-[attribute$=value]  匹配属性的值以value结束的元素
-[attribute*=value]  匹配属性的值含有value的元素
-[attribute|=value]  匹配属性的值等于value或以value开头，后接-的元素
-[attribute~=value]  匹配属性用空格分隔的值中包含value的元素
-[attribute1][attribute2]...  匹配满足多个属性过滤器的元素
-</code></pre><h3 id="子元素"><a href="#子元素" class="headerlink" title="子元素"></a>子元素</h3><pre><code>:nth-child(index/even/odd)  匹配所有父元素下的第index个子元素(从1开始)或奇偶元素
-:first-child  匹配所有父元素的第一个子元素
-:last-child   匹配所有父元素的最后一个子元素
-:only-child   匹配所有父元素的唯一一个子元素
-</code></pre><h3 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h3><pre><code>:enabled   匹配所有可用元素
-:disabled  匹配所有不可用元素
-:checked   匹配所有选中的元素(单选框，复选框)
-:selected  匹配所有选中的option元素(下拉列表)
-</code></pre><h2 id="表单选择器"><a href="#表单选择器" class="headerlink" title="表单选择器"></a>表单选择器</h2><pre><code>:input  匹配所有input、textarea、select、button元素
-:text   匹配所有的单行文本框
-:password  匹配所有密码框
-:radio     匹配所有单选按钮
-:checkbox  匹配所有复选框
-:submit    匹配所有提交按钮
-:image     匹配所有图像域
-:reset     匹配所有重置按钮
-:button    匹配所有按钮
-:file      匹配所有文件域
-:hidden    匹配所有不可见元素
-</code></pre>
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/weixin.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -261,46 +170,60 @@ prev~siblings        匹配prev元素之后的所有同辈元素
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
-<nav id="article-nav">
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/07/01/jQuery选择器/" class="archive-article-date">
+  	<time datetime="2017-07-01T12:18:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-01</time>
+</a>
+        </div>
+    	 
   
-    <a href="/2017/07/02/jQuery-DOM操作/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          jQuery DOM操作
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/06/30/jQuery基础知识/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">jQuery基础知识</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
-  
-  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/07/01/jQuery选择器/">jQuery选择器</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
   
 
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2017/07/">&laquo; Prev</a><a class="page-number" href="/archives/2017/07/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -324,8 +247,8 @@ prev~siblings        匹配prev元素之后的所有同辈元素
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

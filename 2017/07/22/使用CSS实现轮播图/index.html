@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yearslater.me/2017/07/22/使用CSS实现轮播图/index.html">
 <meta property="og:site_name" content="Years">
 <meta property="og:description" content="基本知识animation属性 语法： animation: name duration timing-function delay iteration-count direction 参数解释： animation-name             属性为 @keyframes 动画指定名称 animation-duration         属性定义动画完成一个周期需要多少秒或毫秒 anim">
-<meta property="og:updated_time" content="2017-07-22T06:34:13.752Z">
+<meta property="og:updated_time" content="2017-07-24T01:19:50.635Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用CSS实现轮播图">
 <meta name="twitter:description" content="基本知识animation属性 语法： animation: name duration timing-function delay iteration-count direction 参数解释： animation-name             属性为 @keyframes 动画指定名称 animation-duration         属性定义动画完成一个周期需要多少秒或毫秒 anim">
@@ -229,8 +229,11 @@ css代码：
     top: 0;
     width: 500%;
     height: 100%;
-    /*不设置此项图片会有白边*/
+    /*因为中间空白（回车\空格）等的影响，因为空格也属于字符,这些空白也会被应用样式，占据空间，
+    所以会有空白间隔，把字符大小设为0，就没有空格了*/
     font-size: 0;
+    /* 初始位置位移，不设置也不会出错 */
+    transform: translate(0,0);
     animation: loop 10s linear infinite;
 }
 /*轮播项与主容器宽高应一致*/
@@ -439,15 +442,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color4">互联网</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">互联网</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -456,6 +455,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -514,7 +517,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">你不明白&lt;br&gt;&lt;br&gt;</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">你不明白&lt;br&gt;我没有学会爱自己&lt;br&gt;也没有学会爱别人</div>
   	  	
     	</section>
     
