@@ -131,6 +131,105 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-使用jQuery实现轮播图" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/29/使用jQuery实现轮播图/">使用jQuery实现轮播图</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/29/使用jQuery实现轮播图/" class="archive-article-date">
+  	<time datetime="2017-07-29T01:48:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><pre><code>&lt;div class=&quot;loop-wrap&quot;&gt;
+    &lt;div class=&quot;loop-container&quot;&gt;
+        &lt;img src=&quot;../img/1.jpg&quot; alt=&quot;&quot; class=&quot;loop-image&quot; /&gt;
+        &lt;img src=&quot;../img/2.jpg&quot; alt=&quot;&quot; class=&quot;loop-image&quot; /&gt;
+        &lt;img src=&quot;../img/3.jpg&quot; alt=&quot;&quot; class=&quot;loop-image&quot; /&gt;
+        &lt;img src=&quot;../img/4.jpg&quot; alt=&quot;&quot; class=&quot;loop-image&quot; /&gt;
+        &lt;img src=&quot;../img/5.jpg&quot; alt=&quot;&quot; class=&quot;loop-image&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><pre><code>.loop-wrap{
+    position: relative;
+    width: 500px;
+    height: 300px;
+    margin: 100px auto;
+    overflow: hidden;
+}
+.loop-container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 500%;
+    height: 100%;
+    font-size: 0;
+}
+.loop-image{
+    width: 500px;
+    height: 300px;
+}
+</code></pre><h2 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h2><pre><code>$(function(){
+    function move(){
+        $(&quot;.loop-container&quot;).animate(
+            { &quot;marginLeft&quot;:&quot;-500px&quot;},
+            &quot;slow&quot;,
+            function(){
+                $(&quot;.loop-container img:last&quot;).after($(&quot;.loop-container img:first&quot;));
+                $(&quot;.loop-container&quot;).css(&quot;marginLeft&quot;,0);
+            }
+        )
+    }
+    setInterval(move,2000);
+})
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/29/使用jQuery实现轮播图/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-mobiscroll插件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -151,7 +250,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h2><p><a href="https://www.mobiscroll.com/" target="_blank" rel="external">mobiscroll</a></p>
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Mobiscroll 是一个日期和时间选择器jQuery插件，支持所有主要的移动和桌面浏览器。</p>
+<p><a href="https://www.mobiscroll.com/" target="_blank" rel="external">官网</a></p>
+<p><a href="https://demo.mobiscroll.com/v3/calendar" target="_blank" rel="external">官网demo</a></p>
+<p><a href="https://www.mobiscroll.cn/#/app/mobiscroll/index" target="_blank" rel="external">中文文档</a></p>
 <h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><p>导入jQuery的js文件，导入mobiscroll的css和js文件</p>
 <p><strong>日期</strong></p>
 <pre><code>&lt;input type=&quot;text&quot; class=&quot;demo-test-date&quot; placeholder=&quot;开始时间&quot;/&gt;
@@ -835,69 +937,6 @@ triggerHandler(type,[data])  在每一个匹配的元素上触发某类事件,�
 
 
   
-    <article id="post-第一次看海" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/11/第一次看海/">第一次看海</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/11/第一次看海/" class="archive-article-date">
-  	<time datetime="2017-07-11T06:47:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>7月5日下午坐车去秦皇岛，到秦皇岛车站时五点，坐34路公交车到河北科技师范学院下车，下车后顺着公交车的方向前行到十字路口，左拐到驿家365，在这里住下。放好东西后，在之前的那个十字路口那里吃了晚饭后，朝着酒店的方向走，过一个红绿灯后，继续向前走，走一会儿就看到海了。八点多在河北科技师范学院对面的广源超市买了泳裤，水和干粮，晚上睡下。</p>
-<p>6日，坐34路公交车在第一医院换乘35路，在欢乐海洋公园(乐岛)下车。(建议先看游乐场地图和景点分布) 上午看了白鲸，海豚，海狮表演，中午吃过饭后在泳池里游了会泳。下午看了看海洋生物，坐了摩天轮和下面这个东西，好像是叫勇者之旅，刺激坏了。</p>
-<p><img src="/2017/07/11/第一次看海/play.jpg" alt=""></p>
-<p>7日上午，坐34路到赤土山下车，手机导航到鸽子窝；坐34路到刘庄，参观了怪楼奇园。这两个地方比较小，一会儿就转完了。下午坐车去找同学，晚上一起吃饭，在他家睡了一晚。</p>
-<p>8日中午送我到车站，谢谢我男神的款待。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生活</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/11/第一次看海/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -994,11 +1033,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">互联网</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">互联网</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1007,10 +1050,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
