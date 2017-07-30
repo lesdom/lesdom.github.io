@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yearslater.me">
   <title>三维聚源 | Years</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、有如下代码，请说出程序的运行结果 var a=0; setTimeout(     function(){         alert(++a);         a=100;     },1000 ); a=&amp;apos;20&amp;apos;; 2、现有此代码&amp;lt;input type=&amp;quot;text&amp;quot; id=&amp;quot;start&amp;quot;&amp;gt;，&amp;lt;input typ">
+  <meta name="description" content="面试题1、有如下代码，请说出程序的运行结果 var a=0; setTimeout(     function(){         alert(++a);         a=100;     },1000 ); a=&amp;apos;20&amp;apos;; 2、现有此代码&amp;lt;input type=&amp;quot;text&amp;quot; id=&amp;quot;start&amp;quot;&amp;gt;，&amp;lt;input">
 <meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="三维聚源">
 <meta property="og:url" content="http://yearslater.me/2017/07/24/三维聚源/index.html">
 <meta property="og:site_name" content="Years">
-<meta property="og:description" content="1、有如下代码，请说出程序的运行结果 var a=0; setTimeout(     function(){         alert(++a);         a=100;     },1000 ); a=&amp;apos;20&amp;apos;; 2、现有此代码&amp;lt;input type=&amp;quot;text&amp;quot; id=&amp;quot;start&amp;quot;&amp;gt;，&amp;lt;input typ">
-<meta property="og:updated_time" content="2017-07-26T12:58:15.958Z">
+<meta property="og:description" content="面试题1、有如下代码，请说出程序的运行结果 var a=0; setTimeout(     function(){         alert(++a);         a=100;     },1000 ); a=&amp;apos;20&amp;apos;; 2、现有此代码&amp;lt;input type=&amp;quot;text&amp;quot; id=&amp;quot;start&amp;quot;&amp;gt;，&amp;lt;input">
+<meta property="og:updated_time" content="2017-07-30T13:33:01.824Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="三维聚源">
-<meta name="twitter:description" content="1、有如下代码，请说出程序的运行结果 var a=0; setTimeout(     function(){         alert(++a);         a=100;     },1000 ); a=&amp;apos;20&amp;apos;; 2、现有此代码&amp;lt;input type=&amp;quot;text&amp;quot; id=&amp;quot;start&amp;quot;&amp;gt;，&amp;lt;input typ">
+<meta name="twitter:description" content="面试题1、有如下代码，请说出程序的运行结果 var a=0; setTimeout(     function(){         alert(++a);         a=100;     },1000 ); a=&amp;apos;20&amp;apos;; 2、现有此代码&amp;lt;input type=&amp;quot;text&amp;quot; id=&amp;quot;start&amp;quot;&amp;gt;，&amp;lt;input">
   
     <link rel="alternative" href="/atom.xml" title="Years" type="application/atom+xml">
   
@@ -154,7 +154,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1、有如下代码，请说出程序的运行结果</p>
+        <h2 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h2><p>1、有如下代码，请说出程序的运行结果</p>
 <pre><code>var a=0;
 setTimeout(
     function(){
@@ -166,7 +166,8 @@ a=&apos;20&apos;;
 </code></pre><p>2、现有此代码<code>&lt;input type=&quot;text&quot; id=&quot;start&quot;&gt;</code>，<code>&lt;input type=&quot;text&quot; id=&quot;start&quot;&gt;</code>使用原生js实现以下功能。</p>
 <p>1&gt;获取用户输入的值，若值不为数字或start的值大于end的值，弹出警告。</p>
 <p>2&gt;随机获取从start到end之间的10个不同的数，将这十个数排序。</p>
-<p>3、有如下代码，请说出两块div的尺寸和Hello word的颜色。</p>
+<a id="more"></a>
+<p>3、有如下代码，请说出两块div的尺寸和Hello world的颜色。</p>
 <pre><code>&lt;style type=&quot;text/css&quot;&gt;    
     div{ width: 100%; }
     .box&gt;div{ width: 200px; }
@@ -178,10 +179,17 @@ a=&apos;20&apos;;
 
 &lt;div class=&quot;box&quot;&gt;
     &lt;div id=&quot;cotent&quot; class=&quot;blue block red&quot;&gt;
-        hello word
+        hello world
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre><p>4、实现轮播图，分别使用js(可使用jQuery等框架)和css3两种方法。</p>
+<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><p>1、1秒后弹出21</p>
+<p>2、</p>
+<p>3、类为box的div宽100%； id为content的div宽400px； Hello world颜色为蓝色。</p>
+<p>4、<a href="http://yearslater.me/2017/07/22/使用CSS实现轮播图/">CSS</a>　<a href="http://yearslater.me/2017/07/29/使用jQuery实现轮播图/">jQuery</a></p>
+<h2 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h2><p>1、第一步对变量a初始化为0，第二步将变量a重新赋值为字符串值”20”，第三步1秒后执行匿名函数，对变量a执行自增操作，先将字符串值”20”转换为数值20，然后执行加1操作，最后弹出21结果。</p>
+<p>2、</p>
+<p>3、优先级：ID &gt; class &gt; tag ; 同级别css中后面的样式覆盖前面的样式。</p>
 
       
 
@@ -364,11 +372,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -381,6 +389,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -131,6 +131,70 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JavaScript数据类型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/30/JavaScript数据类型/">JavaScript数据类型</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/30/JavaScript数据类型/" class="archive-article-date">
+  	<time datetime="2017-07-30T05:11:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><p>基本数据类型：Undefined、Null、Boolean、Number、String</p>
+<p>引用数据类型：Object</p>
+<p>常见内置对象：Boolean、Number、String、Function、Array、Date、Math、JSON、RegExp、Error</p>
+<p>基本数据类型：基本数据类型值指保存在栈内存中的简单数据段。访问方式是按值访问，操作的是变量实际保存的值。<br><br>引用数据类型：引用数据类型值指保存在堆内存中的对象。也就是，变量中保存的实际上只是一个指针，这个指针指向内存中的另一个位置，该位置保存着对象。访问方式是按引用访问，当操作时，需要先从栈中读取内存地址，然后再延指针找到保存在堆内存中的值。</p>
+        
+          <a class="article-more-a" href="/2017/07/30/JavaScript数据类型/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/30/JavaScript数据类型/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-使用jQuery实现轮播图" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -417,7 +481,7 @@ $(function() {
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1、有如下代码，请说出程序的运行结果</p>
+        <h2 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h2><p>1、有如下代码，请说出程序的运行结果</p>
 <pre><code>var a=0;
 setTimeout(
     function(){
@@ -429,23 +493,9 @@ a=&apos;20&apos;;
 </code></pre><p>2、现有此代码<code>&lt;input type=&quot;text&quot; id=&quot;start&quot;&gt;</code>，<code>&lt;input type=&quot;text&quot; id=&quot;start&quot;&gt;</code>使用原生js实现以下功能。</p>
 <p>1&gt;获取用户输入的值，若值不为数字或start的值大于end的值，弹出警告。</p>
 <p>2&gt;随机获取从start到end之间的10个不同的数，将这十个数排序。</p>
-<p>3、有如下代码，请说出两块div的尺寸和Hello word的颜色。</p>
-<pre><code>&lt;style type=&quot;text/css&quot;&gt;    
-    div{ width: 100%; }
-    .box&gt;div{ width: 200px; }
-    .block{ width: 300px; }
-    #cotent{ width: 400px; }
-    .red{ color: red; }
-    .blue{ color: blue; }
-&lt;/style&gt;
-
-&lt;div class=&quot;box&quot;&gt;
-    &lt;div id=&quot;cotent&quot; class=&quot;blue block red&quot;&gt;
-        hello word
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre><p>4、实现轮播图，分别使用js(可使用jQuery等框架)和css3两种方法。</p>
-
+        
+          <a class="article-more-a" href="/2017/07/24/三维聚源/#more">more >></a>
+        
       
 
       
@@ -868,75 +918,6 @@ app.controller(&apos;myCtrl&apos;,function($scope,$http){
 
 
   
-    <article id="post-jQuery事件和动画" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/12/jQuery事件和动画/">jQuery事件和动画</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/12/jQuery事件和动画/" class="archive-article-date">
-  	<time datetime="2017-07-12T07:37:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h4 id="载入"><a href="#载入" class="headerlink" title="载入"></a>载入</h4><pre><code>ready(fn)  保障DOM载入就绪后执行其他操作
-</code></pre><h4 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h4><pre><code>bind(type,[data],fn)  为匹配元素的特定事件绑定事件处理函数
-unbind([type],[data]) 为匹配元素删除绑定的事件
-one(type,[data],fn)   为匹配元素的特定事件绑定一个一次性事件处理函数
-on(events[,selector][,data],handler) 在匹配元素上绑定一个或多个事件处理函数
-off(events[,selector][,handler])     移除.on()绑定的事件处理函数
-trigger(type,[data])         在每一个匹配的元素上触发某类事件
-triggerHandler(type,[data])  在每一个匹配的元素上触发某类事件,但不执行浏览器默认操作
-</code></pre>
-        
-          <a class="article-more-a" href="/2017/07/12/jQuery事件和动画/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/12/jQuery事件和动画/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1033,11 +1014,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1050,6 +1031,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yearslater.me">
-  <title>Angular服务 | Years</title>
+  <title>Tag: JavaScript | Years</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="$http服务$http 是 AngularJS 应用中最常用的服务。服务向服务器发送请求，应用响应服务器传送过来的数据。 HTML &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html ng-app=&amp;quot;myApp&amp;quot;&amp;gt;     &amp;lt;head&amp;gt;         &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;         &amp;">
-<meta name="keywords" content="Angular">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Angular服务">
-<meta property="og:url" content="http://yearslater.me/2017/07/23/Angular服务/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Years">
+<meta property="og:url" content="http://yearslater.me/tags/JavaScript/index.html">
 <meta property="og:site_name" content="Years">
-<meta property="og:description" content="$http服务$http 是 AngularJS 应用中最常用的服务。服务向服务器发送请求，应用响应服务器传送过来的数据。 HTML &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html ng-app=&amp;quot;myApp&amp;quot;&amp;gt;     &amp;lt;head&amp;gt;         &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;         &amp;">
-<meta property="og:updated_time" content="2017-07-23T13:23:09.440Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Angular服务">
-<meta name="twitter:description" content="$http服务$http 是 AngularJS 应用中最常用的服务。服务向服务器发送请求，应用响应服务器传送过来的数据。 HTML &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html ng-app=&amp;quot;myApp&amp;quot;&amp;gt;     &amp;lt;head&amp;gt;         &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;         &amp;">
+<meta name="twitter:title" content="Years">
   
     <link rel="alternative" href="/atom.xml" title="Years" type="application/atom+xml">
   
@@ -134,182 +129,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Angular服务" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Angular服务
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/07/30/JavaScript数据类型/" class="archive-article-date">
+  	<time datetime="2017-07-30T05:11:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-30</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/07/30/JavaScript数据类型/">JavaScript数据类型</a>
     </h1>
   
 
-        
-        <a href="/2017/07/23/Angular服务/" class="archive-article-date">
-  	<time datetime="2017-07-23T12:22:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="http服务"><a href="#http服务" class="headerlink" title="$http服务"></a>$http服务</h2><p>$http 是 AngularJS 应用中最常用的服务。服务向服务器发送请求，应用响应服务器传送过来的数据。</p>
-<p><strong>HTML</strong></p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html ng-app=&quot;myApp&quot;&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;UTF-8&quot;&gt;
-        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no&quot; /&gt;
-        &lt;title&gt;标题&lt;/title&gt;
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../css/example.css&quot; /&gt;
-    &lt;/head&gt;
-    &lt;body ng-controller=&quot;myCtrl&quot;&gt;
-        &lt;div ng-bind=&quot;someValue&quot;&gt;&lt;/div&gt;
-    &lt;/body&gt;
-    &lt;script src=&quot;//cdn.bootcss.com/angular.js/1.5.8/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;../js/example.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-&lt;/html&gt;
-</code></pre><a id="more"></a>
-<p><strong>JavaScript</strong></p>
-<pre><code>var app = angular.module(&apos;myApp&apos;,[]);
-app.controller(&apos;myCtrl&apos;,function($scope,$http){
-    $http({
-        method: &apos;get&apos;,
-        url: &apos;http://192.168.1.200:9999/&apos;,
-        params: {
-            &apos;params1&apos;: &apos;value1&apos;,
-            &apos;params2&apos;: value2
-        }
-    }).then(function (resp) {
-        //console.log(resp);
-        if(resp.data.status == &apos;OK&apos;){
-            $scope.someValue=resp.data.data.someValue;
-            console.log($scope.someValue);
-        }
-    }, function (resp) {
-        console.error(resp);
-    });
-});    
-</code></pre><p>Scope(作用域) 是一个对象，有可用的方法和属性，是应用在 HTML (视图) 和 JavaScript (控制器)之间的纽带，用来绑定数据。在 AngularJS 创建控制器时，你可以将 $scope 对象当作一个参数传递，视图中，你不需要添加 $scope 前缀, 只需要添加属性名就可以获取相应的数据。</p>
-<p>http请求指定方法，网址，参数，当请求成功后执行then()方法的第一个函数，请求失败后执行第二个函数。</p>
-<h2 id="timeout服务"><a href="#timeout服务" class="headerlink" title="$timeout服务"></a>$timeout服务</h2><p>AngularJS $timeout 服务对应了 JS window.setTimeout 函数，单次或多次延时执行指定函数。</p>
-<pre><code>&lt;div ng-app=&quot;myApp&quot; ng-controller=&quot;myCtrl&quot;&gt; 
-    &lt;p&gt;两秒后显示信息:&lt;/p&gt;
-    &lt;h1&gt;{{myHeader}}&lt;/h1&gt;
-&lt;/div&gt;
-js代码：
-var app = angular.module(&apos;myApp&apos;, []);
-app.controller(&apos;myCtrl&apos;, function($scope, $timeout) {
-    $scope.myHeader = &quot;Hello World!&quot;;
-    $timeout(function () {
-        $scope.myHeader = &quot;How are you today?&quot;;
-    }, 2000);
-});
-</code></pre><h2 id="interval服务"><a href="#interval服务" class="headerlink" title="$interval服务"></a>$interval服务</h2><p>AngularJS $interval 服务对应了 JS window.setInterval 函数，循环始终延时执行指定函数。</p>
-<pre><code>&lt;div ng-app=&quot;myApp&quot; ng-controller=&quot;myCtrl&quot;&gt;
-    &lt;p&gt;现在时间是:&lt;/p&gt;
-    &lt;h1&gt;{{theTime}}&lt;/h1&gt;
-&lt;/div&gt;
-js代码：
-var app = angular.module(&apos;myApp&apos;, []);
-app.controller(&apos;myCtrl&apos;, function($scope, $interval) {
-    $scope.theTime = new Date().toLocaleTimeString();
-    $interval(function () {
-        $scope.theTime = new Date().toLocaleTimeString();
-    }, 1000);
-});
-</code></pre>
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/weixin.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Angular</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/07/24/三维聚源/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          三维聚源
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/07/22/使用CSS实现轮播图/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">使用CSS实现轮播图</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
+    
 
 
           </div>
@@ -332,9 +205,9 @@ app.controller(&apos;myCtrl&apos;, function($scope, $interval) {
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
