@@ -131,6 +131,119 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Bootstrap栅格系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/31/Bootstrap栅格系统/">Bootstrap栅格系统</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/31/Bootstrap栅格系统/" class="archive-article-date">
+  	<time datetime="2017-07-31T08:54:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="布局容器"><a href="#布局容器" class="headerlink" title="布局容器"></a>布局容器</h2><p><strong>.container</strong></p>
+<pre><code>&lt;!--固定宽度--&gt;
+&lt;div class=&quot;container&quot;&gt;
+    ...
+&lt;/div&gt;
+</code></pre><p><strong>.container-fluid</strong></p>
+<pre><code>&lt;!--100%宽度--&gt;
+&lt;div class=&quot;container-fluid&quot;&gt;
+  ...
+&lt;/div&gt;
+</code></pre><h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><pre><code>1&gt;“行（row）”必须包含在 .container （固定宽度）或 .container-fluid （100% 宽度）中，
+    以便为其赋予合适的排列（aligment）和内补（padding）。
+2&gt;通过“行（row）”在水平方向创建一组“列（column）”。(默认12，1行多于12列换行单独显示)
+3&gt;你的内容应当放置于“列（column）”内，并且，只有“列（column）”可以作为行（row）”的直接子元素。
+</code></pre><h2 id="栅栏参数"><a href="#栅栏参数" class="headerlink" title="栅栏参数"></a>栅栏参数</h2><p><img src="/2017/07/31/Bootstrap栅格系统/bootstrap.jpg" alt=""></p>
+<h2 id="列偏移"><a href="#列偏移" class="headerlink" title="列偏移"></a>列偏移</h2><p>使用 .col-md-offset-<em> 类可以将列向右侧偏移，这些类会把一个列的左外边距（margin）增加 </em> 列，其中 * 范围是从 1 到 11。</p>
+<p>比如使用.col-md-6 .col-md-offset-3来向右偏移三列实现居中。</p>
+<pre><code>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-6 col-md-offset-3&quot;&gt;.col-md-6 .col-md-offset-3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h2 id="嵌套列"><a href="#嵌套列" class="headerlink" title="嵌套列"></a>嵌套列</h2><p>为了使用内置的栅格系统将内容再次嵌套，可以通过添加一个新的 .row 元素和一系列 .col-sm-<em> 元素到已经存在的 .col-sm-</em> 元素内。</p>
+<pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-8&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-8&quot;&gt;col-md-8&lt;/div&gt;
+                &lt;div class=&quot;col-md-4&quot;&gt;col-md-4&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-4&quot;&gt;
+            没有嵌套
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h2 id="列排序"><a href="#列排序" class="headerlink" title="列排序"></a>列排序</h2><p>通过使用 .col-md-push-<em> 和 .col-md-pull-</em> 类就可以很容易的改变列（column）的顺序。</p>
+<pre><code>&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-9 col-md-push-3&quot;&gt;.col-md-9 .col-md-push-3&lt;/div&gt;
+    &lt;div class=&quot;col-md-3 col-md-pull-9&quot;&gt;.col-md-3 .col-md-pull-9&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><pre><code>&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-6 col-md-8&quot;&gt;.col-xs-12 .col-sm-6 .col-md-8&lt;/div&gt;
+    &lt;div class=&quot;col-xs-6 col-md-4&quot;&gt;.col-xs-6 .col-md-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs-6 col-sm-4&quot;&gt;.col-xs-6 .col-sm-4&lt;/div&gt;
+    &lt;div class=&quot;col-xs-6 col-sm-4&quot;&gt;.col-xs-6 .col-sm-4&lt;/div&gt;
+    &lt;div class=&quot;clearfix visible-xs-block&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-xs-6 col-sm-4&quot;&gt;.col-xs-6 .col-sm-4&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p><strong>宽屏效果</strong></p>
+<p><img src="/2017/07/31/Bootstrap栅格系统/wide.png" alt=""></p>
+<p><strong>窄屏效果</strong></p>
+<p><img src="/2017/07/31/Bootstrap栅格系统/narrow.png" alt=""></p>
+<h2 id="响应式列重置"><a href="#响应式列重置" class="headerlink" title="响应式列重置"></a>响应式列重置</h2><p>在某些阈值时，某些列可能会出现比别的列高的情况。可以在未超过12与超过12的部分写以下代码</p>
+<pre><code>&lt;div class=&quot;clearfix visible-xs-block&quot;&gt;&lt;/div&gt;
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bootstrap</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/31/Bootstrap栅格系统/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-JavaScript数据类型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -844,80 +957,6 @@ $(&quot;#search&quot;).focus(function(){
 
 
   
-    <article id="post-Angular指令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/15/Angular指令/">Angular指令</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/15/Angular指令/" class="archive-article-date">
-  	<time datetime="2017-07-15T03:12:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="内置指令"><a href="#内置指令" class="headerlink" title="内置指令"></a>内置指令</h2><h3 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h3><p><strong>ng-app</strong></p>
-<p>ng-app 指令定义一个 AngularJS 应用程序，为 AngularJS 应用创建 $rootScope，具有 ng-app 属性的 DOM 元素将被标记为 $rootScope 的起始点。</p>
-<pre><code>&lt;html ng-app=&quot;myApp&quot;&gt;
-&lt;/html&gt;
-js代码:
-var app = angular.module(&apos;myApp&apos;,[]);
-</code></pre><p><strong>ng-controller</strong></p>
-<p>ng-controller 指令用于控制 AngularJS 应用程序，在控制器中，你可以编写代码，制作函数和变量，并使用 scope 对象来访问。</p>
-<pre><code>&lt;body ng-controller=&quot;myCtrl&quot;&gt;    
-&lt;/body&gt;
-js代码:
-app.controller(&apos;myCtrl&apos;,function($scope,$http){
-});
-</code></pre>
-        
-          <a class="article-more-a" href="/2017/07/15/Angular指令/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Angular</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/15/Angular指令/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1010,6 +1049,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Bootstrap</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Angular</a>
               </li>
              
@@ -1022,6 +1065,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">互联网</a>
               </li>
              
@@ -1031,10 +1078,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
