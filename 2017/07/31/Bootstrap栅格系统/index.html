@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="http://yearslater.me">
   <title>Bootstrap栅格系统 | Years</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="布局容器.container &amp;lt;!--固定宽度--&amp;gt; &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;     ... &amp;lt;/div&amp;gt; .container-fluid &amp;lt;!--100%宽度--&amp;gt; &amp;lt;div class=&amp;quot;container-fluid&amp;quot;&amp;gt;   ... &amp;lt;/div&amp;gt; 工作原理">
+  <meta name="description" content="布局容器.container &amp;lt;!--固定宽度--&amp;gt; &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;     ... &amp;lt;/div&amp;gt; .container-fluid &amp;lt;!--100%宽度--&amp;gt; &amp;lt;div class=&amp;quot;container-fluid&amp;quot;&amp;gt;   ... &amp;lt;/div&amp;gt;">
 <meta name="keywords" content="Bootstrap">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Bootstrap栅格系统">
 <meta property="og:url" content="http://yearslater.me/2017/07/31/Bootstrap栅格系统/index.html">
 <meta property="og:site_name" content="Years">
-<meta property="og:description" content="布局容器.container &amp;lt;!--固定宽度--&amp;gt; &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;     ... &amp;lt;/div&amp;gt; .container-fluid &amp;lt;!--100%宽度--&amp;gt; &amp;lt;div class=&amp;quot;container-fluid&amp;quot;&amp;gt;   ... &amp;lt;/div&amp;gt; 工作原理">
+<meta property="og:description" content="布局容器.container &amp;lt;!--固定宽度--&amp;gt; &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;     ... &amp;lt;/div&amp;gt; .container-fluid &amp;lt;!--100%宽度--&amp;gt; &amp;lt;div class=&amp;quot;container-fluid&amp;quot;&amp;gt;   ... &amp;lt;/div&amp;gt;">
 <meta property="og:image" content="http://yearslater.me/2017/07/31/Bootstrap栅格系统/bootstrap.jpg">
 <meta property="og:image" content="http://yearslater.me/2017/07/31/Bootstrap栅格系统/wide.png">
 <meta property="og:image" content="http://yearslater.me/2017/07/31/Bootstrap栅格系统/narrow.png">
-<meta property="og:updated_time" content="2017-07-31T12:36:11.059Z">
+<meta property="og:updated_time" content="2017-07-31T15:43:39.651Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bootstrap栅格系统">
-<meta name="twitter:description" content="布局容器.container &amp;lt;!--固定宽度--&amp;gt; &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;     ... &amp;lt;/div&amp;gt; .container-fluid &amp;lt;!--100%宽度--&amp;gt; &amp;lt;div class=&amp;quot;container-fluid&amp;quot;&amp;gt;   ... &amp;lt;/div&amp;gt; 工作原理">
+<meta name="twitter:description" content="布局容器.container &amp;lt;!--固定宽度--&amp;gt; &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;     ... &amp;lt;/div&amp;gt; .container-fluid &amp;lt;!--100%宽度--&amp;gt; &amp;lt;div class=&amp;quot;container-fluid&amp;quot;&amp;gt;   ... &amp;lt;/div&amp;gt;">
 <meta name="twitter:image" content="http://yearslater.me/2017/07/31/Bootstrap栅格系统/bootstrap.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Years" type="application/atom+xml">
@@ -168,17 +168,18 @@
 &lt;div class=&quot;container-fluid&quot;&gt;
   ...
 &lt;/div&gt;
-</code></pre><h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><pre><code>1&gt;“行（row）”必须包含在 .container （固定宽度）或 .container-fluid （100% 宽度）中，
+</code></pre><a id="more"></a>
+<h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><pre><code>1&gt;“行（row）”必须包含在 .container （固定宽度）或 .container-fluid （100% 宽度）中，
     以便为其赋予合适的排列（aligment）和内补（padding）。
 2&gt;通过“行（row）”在水平方向创建一组“列（column）”。(默认12，1行多于12列换行单独显示)
 3&gt;你的内容应当放置于“列（column）”内，并且，只有“列（column）”可以作为行（row）”的直接子元素。
 </code></pre><h2 id="栅栏参数"><a href="#栅栏参数" class="headerlink" title="栅栏参数"></a>栅栏参数</h2><p><img src="/2017/07/31/Bootstrap栅格系统/bootstrap.jpg" alt=""></p>
-<h2 id="列偏移"><a href="#列偏移" class="headerlink" title="列偏移"></a>列偏移</h2><p>使用 .col-md-offset-<em> 类可以将列向右侧偏移，这些类会把一个列的左外边距（margin）增加 </em> 列，其中 * 范围是从 1 到 11。</p>
-<p>比如使用.col-md-6 .col-md-offset-3来向右偏移三列实现居中。</p>
+<h2 id="列偏移"><a href="#列偏移" class="headerlink" title="列偏移"></a>列偏移</h2><p>使用 <code>.col-md-offset-*</code> 类可以将列向右侧偏移，这些类会把一个列的左外边距（margin）增加 <code>*</code> 列，其中 * 范围是从 1 到 11。</p>
+<p>比如使用<code>.col-md-6 .col-md-offset-3</code>来向右偏移三列实现居中。</p>
 <pre><code>&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;col-md-6 col-md-offset-3&quot;&gt;.col-md-6 .col-md-offset-3&lt;/div&gt;
 &lt;/div&gt;
-</code></pre><h2 id="嵌套列"><a href="#嵌套列" class="headerlink" title="嵌套列"></a>嵌套列</h2><p>为了使用内置的栅格系统将内容再次嵌套，可以通过添加一个新的 .row 元素和一系列 .col-sm-<em> 元素到已经存在的 .col-sm-</em> 元素内。</p>
+</code></pre><h2 id="嵌套列"><a href="#嵌套列" class="headerlink" title="嵌套列"></a>嵌套列</h2><p>为了使用内置的栅格系统将内容再次嵌套，可以通过添加一个新的 <code>.row</code> 元素和一系列 <code>.col-sm-*</code> 元素到已经存在的 <code>.col-sm-*</code> 元素内。</p>
 <pre><code>&lt;div class=&quot;container&quot;&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-md-8&quot;&gt;
@@ -192,7 +193,7 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre><h2 id="列排序"><a href="#列排序" class="headerlink" title="列排序"></a>列排序</h2><p>通过使用 .col-md-push-<em> 和 .col-md-pull-</em> 类就可以很容易的改变列（column）的顺序。</p>
+</code></pre><h2 id="列排序"><a href="#列排序" class="headerlink" title="列排序"></a>列排序</h2><p>通过使用 <code>.col-md-push-*</code> 和 <code>.col-md-pull-*</code> 类就可以很容易的改变列（column）的顺序。</p>
 <pre><code>&lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;col-md-9 col-md-push-3&quot;&gt;.col-md-9 .col-md-push-3&lt;/div&gt;
     &lt;div class=&quot;col-md-3 col-md-pull-9&quot;&gt;.col-md-3 .col-md-pull-9&lt;/div&gt;
@@ -213,6 +214,45 @@
 <p><img src="/2017/07/31/Bootstrap栅格系统/narrow.png" alt=""></p>
 <h2 id="响应式列重置"><a href="#响应式列重置" class="headerlink" title="响应式列重置"></a>响应式列重置</h2><p>在某些阈值时，某些列可能会出现比别的列高的情况。可以在未超过12与超过12的部分写以下代码</p>
 <pre><code>&lt;div class=&quot;clearfix visible-xs-block&quot;&gt;&lt;/div&gt;
+</code></pre><h2 id="源码分析"><a href="#源码分析" class="headerlink" title="源码分析"></a>源码分析</h2><p>每列左右都会有15px的padding值，这样每列的间隔就是30px,但是第一列和最后一列和外围容器之间会分别有15px的间距，通过为行设置负的margin值来抵消这两个内边距的影响</p>
+<pre><code>.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 /*(1-12)*/{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+</code></pre><p>根据媒体查询设置容器的总宽度，根据类名设置子元素相应的宽度</p>
+<pre><code>/*以xs为例，所有类默认向左浮动，所以列数超过12会自动换行*/
+.col-xs-1 /*(1-12)*/{
+  float: left;
+}
+.col-xs-12 {width: 100%; }
+.col-xs-11 {width: 91.66666667%; }
+.col-xs-10 {width: 83.33333333%;}
+.col-xs-9 { width: 75%;}
+.col-xs-8 {width: 66.66666667%;}
+.col-xs-7 { width: 58.33333333%;}
+.col-xs-6 { width: 50%;}
+.col-xs-5 { width: 41.66666667%;}
+.col-xs-4 { width: 33.33333333%;}
+.col-xs-3 {width: 25%;}
+.col-xs-2 {width: 16.66666667%;}
+.col-xs-1 {width: 8.33333333%;}
+</code></pre><p>列偏移是通过设置margin-left来进行偏移的,偏移量和相应数量列的宽度相同。</p>
+<pre><code>.col-xs-offset-3 {
+  margin-left: 25%;
+}
+</code></pre><p>列排序是通过设置left和right来设置定位，所有的列类名都设有<code>position: relative;</code></p>
+<pre><code>.col-xs-push-3 {
+  left: 25%;
+}
+.col-xs-pull-9 {
+  right: 75%;
+}
 </code></pre>
       
 
@@ -275,6 +315,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/07/31/container和container-fluid的区别/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          container和container-fluid的区别
+        
+      </div>
+    </a>
   
   
     <a href="/2017/07/30/JavaScript数据类型/" id="article-nav-older" class="article-nav-link-wrap">
@@ -382,19 +431,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Bootstrap</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Angular</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color5">Bootstrap</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -402,11 +443,19 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">互联网</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">互联网</a>
               </li>
              
               <li class="article-tag-list-item">

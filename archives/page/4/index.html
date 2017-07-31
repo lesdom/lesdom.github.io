@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yearslater.me">
-  <title>布局总结 | Years</title>
+  <title>Archives | Years</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本常用的标签就是div和span，配合使用display、position、float进行布局。 displayblock(块状元素) 总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示；宽度(width)、高度(height)、内边距(padding)和外边距(margin)都可控制。 HTML5：header、footer、section、article、aside、canv">
-<meta name="keywords" content="CSS">
-<meta property="og:type" content="article">
-<meta property="og:title" content="布局总结">
-<meta property="og:url" content="http://yearslater.me/2017/06/28/布局总结/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Years">
+<meta property="og:url" content="http://yearslater.me/archives/page/4/index.html">
 <meta property="og:site_name" content="Years">
-<meta property="og:description" content="基本常用的标签就是div和span，配合使用display、position、float进行布局。 displayblock(块状元素) 总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示；宽度(width)、高度(height)、内边距(padding)和外边距(margin)都可控制。 HTML5：header、footer、section、article、aside、canv">
-<meta property="og:updated_time" content="2017-06-28T14:56:40.378Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="布局总结">
-<meta name="twitter:description" content="基本常用的标签就是div和span，配合使用display、position、float进行布局。 displayblock(块状元素) 总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示；宽度(width)、高度(height)、内边距(padding)和外边距(margin)都可控制。 HTML5：header、footer、section、article、aside、canv">
+<meta name="twitter:title" content="Years">
   
     <link rel="alternative" href="/atom.xml" title="Years" type="application/atom+xml">
   
@@ -134,258 +129,63 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-布局总结" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      布局总结
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/06/14/使用GitHub和Hexo搭建博客/" class="archive-article-date">
+  	<time datetime="2017-06-14T02:01:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-14</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/06/14/使用GitHub和Hexo搭建博客/">使用GitHub和Hexo搭建博客</a>
     </h1>
   
 
-        
-        <a href="/2017/06/28/布局总结/" class="archive-article-date">
-  	<time datetime="2017-06-28T11:11:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><p>常用的标签就是<code>div</code>和<code>span</code>，配合使用<code>display</code>、<code>position</code>、<code>float</code>进行布局。</p>
-<h3 id="display"><a href="#display" class="headerlink" title="display"></a>display</h3><p><strong>block</strong>(块状元素)</p>
-<p>总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示；<br>宽度(width)、高度(height)、内边距(padding)和外边距(margin)都可控制。</p>
-<pre><code>HTML5：header、footer、section、article、aside、canvas、
-       audio、vedio、output
-HTML： h1-h6、div、p、blockquote、form、table、ul、ol、dl、li、
-       pre、hr、address、noscript
-</code></pre><a id="more"></a>
-<p><strong>inline</strong>(内联元素)</p>
-<p>和相邻的内联元素在同一行；<br>宽度(width)、高度(height)、内边距的top/bottom(padding-top/padding-bottom)和外边距的top/bottom(margin-top/margin-bottom)都不可改变</p>
-<pre><code>a、img、big、small、span、em、strong、b、i、site、code、
-sub、sup、abbr、select、input、br、q、label、textarea
-</code></pre><p><strong>inline-block</strong>(内联块状元素)</p>
-<p>同行显示并可修改宽高内外边距等属性</p>
-<p><strong>none</strong></p>
-<p>不删除元素的情况下隐藏元素，与 visibility 属性的区别：把 display 设置成 none 元素不会占据它本来应该显示的空间，但是设置成 visibility: hidden; 还会占据空间。</p>
-<h3 id="position"><a href="#position" class="headerlink" title="position"></a>position</h3><p><strong>static</strong></p>
-<pre><code>static是默认值，没有定位。
-</code></pre><p><strong>relative</strong></p>
-<pre><code>relative是相对定位，通常用作absolute的父元素辅助定位，
-设置top、right、bottom和left属性会使其偏离其正常位置。
-</code></pre><p><strong>absolute</strong></p>
-<pre><code>absolute是绝对定位，相对于最近的“positioned”祖先元素进行定位，
-通过top、right、bottom和left属性进行规定。
-</code></pre><p><strong>fixed</strong></p>
-<pre><code>fixed是绝对定位，相对于浏览器视窗来定位，随着页面滚动，停留在相同位置，
-通过top、right、bottom和left属性进行规定。
-</code></pre><h3 id="float"><a href="#float" class="headerlink" title="float"></a>float</h3><h4 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h4><p>1、在需要清除浮动的元素上</p>
-<pre><code>clear:both;
-</code></pre><p>2、父元素</p>
-<p>1&gt;</p>
-<pre><code>overflow:hidden;
-</code></pre><p>2&gt;</p>
-<pre><code>.clearfix {
-    overflow: auto;
-    zoom:1;
-}
-</code></pre><p>3&gt;</p>
-<pre><code>.clearfix {
-    overflow:auto;
-    _height:1%;
-}
-</code></pre><p>4&gt;</p>
-<pre><code>.clearfix:after { 
-     content: &quot;.&quot;; 
-     display: block;
-     height: 0;
-     clear: both;
-     visibility: hidden;
-}
-</code></pre><h2 id="分布"><a href="#分布" class="headerlink" title="分布"></a>分布</h2><h3 id="左右"><a href="#左右" class="headerlink" title="左右"></a>左右</h3><p>设置好宽度，使用<code>float</code>、<code>margin</code>、<code>padding</code>实现左右分布</p>
-<h3 id="上下"><a href="#上下" class="headerlink" title="上下"></a>上下</h3><p>使用<code>display:block</code>，让元素单独占据一行</p>
-<h3 id="居中"><a href="#居中" class="headerlink" title="居中"></a>居中</h3><p>1&gt;<strong>水平居中</strong></p>
-<p>子元素为行内元素</p>
-<pre><code>设置父元素：text-align:center;
-</code></pre><p>子元素为定宽块状元素</p>
-<pre><code>设置子元素：margin:auto;
-</code></pre><p>子元素为多个定宽块状元素</p>
-<pre><code>设置父元素：text-align:center;
-设置子元素：display:inline-block;
-</code></pre><p>通用flex布局</p>
-<pre><code>设置父元素：
-display:flex;
-justify-content:center;
-</code></pre><p>2&gt;<strong>垂直居中</strong></p>
-<p>子元素为单行文本</p>
-<pre><code>设置子元素height和line-height为父元素的高度
-</code></pre><p>子元素为多行文本</p>
-<pre><code>设置父元素：
-display:table-cell;
-vertical-align:middle;
-</code></pre><p>或</p>
-<pre><code>设置父元素：
-display:table;
-设置子元素：
-display:table-cell;
-vertical-align:middle;
-(此时子元素充满父元素，设置宽高无用)
-</code></pre><p>子元素为高度已知块状元素</p>
-<pre><code>设置父元素：
-position:relative;
-设置子元素：
-height:固定值
-position:absolute;
-top:50%;
-margin-top:-(height/2)px;
-</code></pre><p>子元素为高度未知块状元素</p>
-<pre><code>设置父元素：
-position:relative;
-设置子元素：
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-</code></pre><p>(浏览器中x正方向为向右，y的正方向为向下<br><br>transform:translateX(-50%);的意思是将子元素向x的负方向[左]移动子元素自身宽度的50%；<br><br>transform:translateY(-50%);的意思是将子元素向y的负方向[上]移动子元素自身高度的50%)</p>
-<p>子元素为图片</p>
-<pre><code>设置父元素：
-display:table-cell;
-vertical-align:middle;
-设置子元素：
-vertical-align:middle;
-</code></pre><p>通用flex布局</p>
-<pre><code>设置父元素：
-display:flex;
-align-items:center;
-</code></pre><p>3&gt;<strong>水平垂直居中</strong></p>
-<p>子元素宽高已知</p>
-<pre><code>设置父元素：
-position:relative;
-设置子元素：
-width:固定值
-height:固定值
-position:absolute;
-top:50%;
-left:50%;
-margin-top:-(height/2)px;
-margin-left:-(width/2)px;
-</code></pre><p>子元素宽高未知</p>
-<pre><code>设置父元素：
-position:relative;
-设置子元素：
-position: absolute;
-top: 50%;
-left: 50%;
-transform:translate(-50%,-50%);
-</code></pre><p>flex布局</p>
-<pre><code>设置父元素：
-display:flex;
-justify-content:center;
-align-items:center;
-</code></pre><p>其他</p>
-<pre><code>设置父元素：
-position:relative;
-设置子元素：
-position: absolute;
-top:0;
-bottom:0;
-left:0;
-right:0;
-margin:auto;
-</code></pre><h3 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h3><p>给父元素设置相对定位，子元素绝对定位，少用。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.daqianduan.com/3606.html" target="_blank" rel="external">浮动</a></p>
-<p><a href="http://www.gbtags.com/gb/gbliblist/20.htm" target="_blank" rel="external">居中</a></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/weixin.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">互联网</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/06/29/CSS选择器/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          CSS选择器
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/06/23/word总结/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">word总结</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/page/3/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="page-number current">4</span>
+    </nav>
   
 
 
@@ -409,8 +209,8 @@ margin:auto;
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
