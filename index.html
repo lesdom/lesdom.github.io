@@ -131,6 +131,76 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Angular过滤器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/01/Angular过滤器/">Angular过滤器</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/01/Angular过滤器/" class="archive-article-date">
+  	<time datetime="2017-08-01T13:41:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><p>过滤器<code>(filter)</code>，接收一个输入，通过某个规则进行处理，然后返回处理后的结果。</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>在<code>ng-bind</code>和 <code>&#123;&#123;&#125;&#125;</code>中使用，在数据后面用<code>|</code>分割</p>
+<pre><code>{{expression | filter}}
+
+&lt;div ng-bind=&quot;data | filter&quot;&gt;&lt;/div&gt;
+</code></pre><p>多个<code>filter</code>连用，上一个<code>filter</code>的输出将作为下一个<code>filter</code>的输入</p>
+<pre><code>{{expression | filter1 | filter2 | ...}}
+</code></pre><p>接收参数，参数用<code>:</code>进行分割</p>
+<pre><code>{{expression | filter:argument1:argument2:...}}
+</code></pre>
+        
+          <a class="article-more-a" href="/2017/08/01/Angular过滤器/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Angular</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/01/Angular过滤器/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-container和container-fluid的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -828,68 +898,6 @@ animation-direction 属性定义是否循环交替反向播放动画
 
 
   
-    <article id="post-jQuery之Ajax" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/21/jQuery之Ajax/">jQuery之Ajax</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/21/jQuery之Ajax/" class="archive-article-date">
-  	<time datetime="2017-07-21T03:40:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="最底层"><a href="#最底层" class="headerlink" title="最底层"></a>最底层</h2><p>$.ajax()</p>
-<p>结构：$.ajax(options)</p>
-        
-          <a class="article-more-a" href="/2017/07/21/jQuery之Ajax/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/21/jQuery之Ajax/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -990,6 +998,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
@@ -998,15 +1010,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+                <a href="javascript:void(0)" class="js-tag color4">互联网</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">互联网</a>
               </li>
              
               <li class="article-tag-list-item">
