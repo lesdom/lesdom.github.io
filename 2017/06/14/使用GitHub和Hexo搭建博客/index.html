@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yearslater.me">
   <title>使用GitHub和Hexo搭建博客 | Years</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用github建立博客站点1、注册github2、新建仓库，仓库名为 username.github.io　(username为你的用户名) 安装软件1、Node.js2、GitHub Desktop(安装完成后登录github客户端)">
-<meta name="keywords" content="互联网">
+  <meta name="description" content="使用github建立博客站点1、注册github2、新建仓库，仓库名为 username.github.io (username为你的用户名) 安装软件1、Node.js2、GitHub Desktop (安装完成后登录github客户端)">
+<meta name="keywords" content="github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用GitHub和Hexo搭建博客">
 <meta property="og:url" content="http://yearslater.me/2017/06/14/使用GitHub和Hexo搭建博客/index.html">
 <meta property="og:site_name" content="Years">
-<meta property="og:description" content="使用github建立博客站点1、注册github2、新建仓库，仓库名为 username.github.io　(username为你的用户名) 安装软件1、Node.js2、GitHub Desktop(安装完成后登录github客户端)">
-<meta property="og:updated_time" content="2017-06-15T11:26:06.833Z">
+<meta property="og:description" content="使用github建立博客站点1、注册github2、新建仓库，仓库名为 username.github.io (username为你的用户名) 安装软件1、Node.js2、GitHub Desktop (安装完成后登录github客户端)">
+<meta property="og:updated_time" content="2017-08-02T03:02:18.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用GitHub和Hexo搭建博客">
-<meta name="twitter:description" content="使用github建立博客站点1、注册github2、新建仓库，仓库名为 username.github.io　(username为你的用户名) 安装软件1、Node.js2、GitHub Desktop(安装完成后登录github客户端)">
+<meta name="twitter:description" content="使用github建立博客站点1、注册github2、新建仓库，仓库名为 username.github.io (username为你的用户名) 安装软件1、Node.js2、GitHub Desktop (安装完成后登录github客户端)">
   
     <link rel="alternative" href="/atom.xml" title="Years" type="application/atom+xml">
   
@@ -154,8 +154,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="使用github建立博客站点"><a href="#使用github建立博客站点" class="headerlink" title="使用github建立博客站点"></a>使用github建立博客站点</h2><p>1、注册<a href="https://github.com/" target="_blank" rel="external">github</a><br><br>2、新建仓库，仓库名为 username.github.io<br><br>　(username为你的用户名)</p>
-<h2 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h2><p>1、<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a><br><br>2、<a href="https://desktop.github.com/" target="_blank" rel="external">GitHub Desktop</a><br>(安装完成后登录github客户端)<br><a id="more"></a></p>
+        <h2 id="使用github建立博客站点"><a href="#使用github建立博客站点" class="headerlink" title="使用github建立博客站点"></a>使用github建立博客站点</h2><p>1、注册<a href="https://github.com/" target="_blank" rel="external">github</a><br>2、新建仓库，仓库名为 username.github.io (username为你的用户名)</p>
+<h2 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h2><p>1、<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a><br>2、<a href="https://desktop.github.com/" target="_blank" rel="external">GitHub Desktop</a> (安装完成后登录github客户端)</p>
+<a id="more"></a>
 <h2 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h2><p>打开 Git Shell，输入</p>
 <pre><code>ssh -T git@github.com
 </code></pre><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>输入 </p>
@@ -168,8 +169,8 @@ npm install
 <p>输入</p>
 <pre><code>hexo g
 hexo s
-</code></pre><p>此时可以访问网址 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 本地预览<br><br>按 Ctrl + C 并输入 y 可以停止该服务</p>
-<h2 id="配置网站"><a href="#配置网站" class="headerlink" title="配置网站"></a>配置网站</h2><p>安装<a href="https://notepad-plus-plus.org/download/v7.3.1.html" target="_blank" rel="external">Notepad++</a><br><br>使用Notepad++打开 _config.yml ，修改配置</p>
+</code></pre><p>此时可以访问网址 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 本地预览<br>按 Ctrl + C 并输入 y 可以停止该服务</p>
+<h2 id="配置网站"><a href="#配置网站" class="headerlink" title="配置网站"></a>配置网站</h2><p>安装<a href="https://notepad-plus-plus.org/download/v7.3.1.html" target="_blank" rel="external">Notepad++</a><br>使用Notepad++打开 _config.yml ，修改配置</p>
 <pre><code>language: zh-Hans
 type: git
 repo: https://github.com/username/username.github.io.git
@@ -184,19 +185,18 @@ hexo d
 <h2 id="发表博文"><a href="#发表博文" class="headerlink" title="发表博文"></a>发表博文</h2><p>输入</p>
 <pre><code>hexo n &quot;文章题目&quot;
 </code></pre><p>此时 E:\hexo\source_posts中多出一个md文件，它就是新建的博文。</p>
-<p>安装<a href="http://markdownpad.com/" target="_blank" rel="external">MarkdownPad2</a><br><br>使用MarkdownPad2编辑博文<br>保存后，输入</p>
+<p>安装<a href="http://markdownpad.com/" target="_blank" rel="external">MarkdownPad2</a><br>使用MarkdownPad2编辑博文<br>保存后，输入</p>
 <pre><code>hexo clean
 hexo g
 hexo d
-</code></pre><p>此时，博文就更新到了你的网站。<br><br>(以后更新博文需要先进入文件夹(cd E:\hexo)，再使用其他命令)</p>
-<p>刚才所说的命令使用了简写，下面为简写与全称对照</p>
+</code></pre><p>此时，博文就更新到了你的网站。<br>(以后更新博文需要先进入文件夹(cd E:\hexo)，再使用其他命令)<br>刚才所说的命令使用了简写，下面为简写与全称对照</p>
 <pre><code>hexo g == hexo generate
 hexo d == hexo deploy
 hexo s == hexo server
 hexo n == hexo new
 </code></pre><h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>从这里挑选喜欢的<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">主题</a>并根据说明文档安装</p>
 <h2 id="图片插件"><a href="#图片插件" class="headerlink" title="图片插件"></a>图片插件</h2><p>可以下载安装此<a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="external">插件</a>来使用本地的图片</p>
-<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>1、购买域名：<a href="https://wanwang.aliyun.com" target="_blank" rel="external">阿里云</a>(实名认证时，联系地址详细到门牌号或者村)<br><br>2、在E:\hexo\source中创建名为CNAME(大写，无后缀)的文件，内容为你的域名，部署到GitHub<br><br>3、域名解析：<a href="https://www.dnspod.cn/" target="_blank" rel="external">DNSpod</a><br><br>添加以下内容：</p>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>1、购买域名：<a href="https://wanwang.aliyun.com" target="_blank" rel="external">阿里云</a>(实名认证时，联系地址详细到门牌号或者村)<br>2、在E:\hexo\source中创建名为CNAME(大写，无后缀)的文件，内容为你的域名，部署到GitHub<br>3、域名解析：<a href="https://www.dnspod.cn/" target="_blank" rel="external">DNSpod</a><br><br>添加以下内容：</p>
 <pre><code>主机记录   记录类型   记录值
 www       CNAME     username.github.io.
 @         A         192.30.252.153
@@ -250,7 +250,7 @@ f1g1ns2.dnspod.net
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">互联网</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
         		</li>
       		
 		</ul>
@@ -387,10 +387,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
@@ -399,11 +395,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">互联网</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">互联网</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -412,6 +412,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
