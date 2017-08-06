@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yearslater.me/2017/06/29/CSS选择器/index.html">
 <meta property="og:site_name" content="Years">
 <meta property="og:description" content="优先级不同级别： 1 在属性后面使用 !important 会覆盖页面内任何位置定义的元素样式。 2 作为style属性写在元素内的样式 3 id选择器 4 类选择器 5 标签选择器 6 通配符选择器 7 浏览器自定义 同一级别： 同一级别中后写的会覆盖先写的样式">
-<meta property="og:updated_time" content="2017-06-29T08:44:54.513Z">
+<meta property="og:updated_time" content="2017-08-06T14:13:57.818Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS选择器">
 <meta name="twitter:description" content="优先级不同级别： 1 在属性后面使用 !important 会覆盖页面内任何位置定义的元素样式。 2 作为style属性写在元素内的样式 3 id选择器 4 类选择器 5 标签选择器 6 通配符选择器 7 浏览器自定义 同一级别： 同一级别中后写的会覆盖先写的样式">
@@ -165,6 +165,8 @@
 </code></pre><p>同一级别：</p>
 <pre><code>同一级别中后写的会覆盖先写的样式
 </code></pre><a id="more"></a>
+<p>解释：</p>
+<p>（1）内联样式表的权值最高1000；<br>（2）id选择器权值100；<br>（3）类选择器/属性选择器/伪类选择器权值10；<br>（4）HTML标签选择器权值为1.</p>
 <h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><p><strong>1、基础选择器</strong></p>
 <pre><code>*        通用元素选择器，匹配页面任何元素
 #id      id选择器，匹配特定id的元素
@@ -424,19 +426,19 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">
