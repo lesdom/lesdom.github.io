@@ -131,6 +131,139 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-container和container-fluid的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/31/container和container-fluid的区别/">container和container-fluid的区别</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/31/container和container-fluid的区别/" class="archive-article-date">
+  	<time datetime="2017-07-31T14:17:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>container的width是用媒体查询获得的动态固定尺寸。当屏幕窄时，宽度为100%。当屏幕变宽后，会随着宽度的不同而有着不同的margin值，居中显示。</p>
+<p>container-fluid的width始终是100％。</p>
+        
+          <a class="article-more-a" href="/2017/07/31/container和container-fluid的区别/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bootstrap</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/31/container和container-fluid的区别/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-Bootstrap栅格系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/31/Bootstrap栅格系统/">Bootstrap栅格系统</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/31/Bootstrap栅格系统/" class="archive-article-date">
+  	<time datetime="2017-07-31T08:54:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="布局容器"><a href="#布局容器" class="headerlink" title="布局容器"></a>布局容器</h2><p><strong>.container</strong></p>
+<pre><code>&lt;!--固定宽度--&gt;
+&lt;div class=&quot;container&quot;&gt;
+    ...
+&lt;/div&gt;
+</code></pre><p><strong>.container-fluid</strong></p>
+<pre><code>&lt;!--100%宽度--&gt;
+&lt;div class=&quot;container-fluid&quot;&gt;
+  ...
+&lt;/div&gt;
+</code></pre>
+        
+          <a class="article-more-a" href="/2017/07/31/Bootstrap栅格系统/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bootstrap</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/31/Bootstrap栅格系统/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-JavaScript数据类型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -757,167 +890,6 @@ animation-direction 属性定义是否循环交替反向播放动画
 
 
   
-    <article id="post-jQuery实例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/20/jQuery实例/">jQuery实例</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/20/jQuery实例/" class="archive-article-date">
-  	<time datetime="2017-07-20T12:09:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h2><p>1、聚焦失焦</p>
-<pre><code>&lt;input id=&quot;search&quot; type=&quot;text&quot; value=&quot;请输入&quot;&gt;
-css代码:
-#username {
-    border: 1px solid #d4d4d4;
-}
-.focus {
-    border: 1px solid #0287d2;
-    background-color: #fcc;
-}
-jQuery代码:
-$(&quot;#search&quot;).focus(function(){
-    $(this).addClass(&quot;focus&quot;);
-    if($(this).val() == this.defaultValue){
-        $(this).val(&quot;&quot;);
-    }
-}).blur(function(){
-    $(this).removeClass(&quot;focus&quot;);
-    if($(this).val() == &quot;&quot;){
-        $(this).val(this.defaultValue);
-    }
-}).keyup(function(e){
-    if(e.which == 13){
-        alert(&quot;回车提交表单&quot;);
-    }
-});
-</code></pre>
-        
-          <a class="article-more-a" href="/2017/07/20/jQuery实例/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/20/jQuery实例/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Angular指令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/15/Angular指令/">Angular指令</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/15/Angular指令/" class="archive-article-date">
-  	<time datetime="2017-07-15T03:12:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="内置指令"><a href="#内置指令" class="headerlink" title="内置指令"></a>内置指令</h2><h3 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h3><p><strong>ng-app</strong></p>
-<p>ng-app 指令定义一个 AngularJS 应用程序，为 AngularJS 应用创建 $rootScope，具有 ng-app 属性的 DOM 元素将被标记为 $rootScope 的起始点。</p>
-<pre><code>&lt;html ng-app=&quot;myApp&quot;&gt;
-&lt;/html&gt;
-js代码:
-var app = angular.module(&apos;myApp&apos;,[]);
-</code></pre><p><strong>ng-controller</strong></p>
-<p>ng-controller 指令用于控制 AngularJS 应用程序，在控制器中，你可以编写代码，制作函数和变量，并使用 scope 对象来访问。</p>
-<pre><code>&lt;body ng-controller=&quot;myCtrl&quot;&gt;    
-&lt;/body&gt;
-js代码:
-app.controller(&apos;myCtrl&apos;,function($scope,$http){
-});
-</code></pre>
-        
-          <a class="article-more-a" href="/2017/07/15/Angular指令/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Angular</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/15/Angular指令/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1022,10 +994,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
@@ -1034,19 +1002,19 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
+                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1055,6 +1023,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">编程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
             
             <div class="clearfix"></div>
@@ -1105,7 +1077,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">你不明白&lt;br&gt;我没有学会爱自己&lt;br&gt;也没有学会爱别人</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">你不明白&lt;br&gt;我没有学会爱自己&lt;br&gt;也没有学会爱别人&lt;br&gt;似乎一眼就能看见贫瘠的未来</div>
   	  	
     	</section>
     

@@ -131,6 +131,154 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Bootstrap菜单、按钮和输入框" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/10/Bootstrap菜单、按钮和输入框/">Bootstrap菜单、按钮和输入框</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/10/Bootstrap菜单、按钮和输入框/" class="archive-article-date">
+  	<time datetime="2017-08-10T01:33:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="菜单"><a href="#菜单" class="headerlink" title="菜单"></a>菜单</h2><p><strong>基本用法</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"dropdown"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"dropdown-toggle"</span> <span class="attr">data-toggle</span>=<span class="string">"dropdown"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"dropdown-menu"</span> &gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>菜单项1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>菜单项2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>使用类名为<code>.dropdown</code>的容器包裹了整个下拉菜单元素</li>
+<li>使用类名为<code>.dropdown-toggle</code>的<code>&lt;button&gt;</code>按钮做为父菜单，data-toggle属性值必须和最外容器类名一致</li>
+<li>使用类名为<code>.dropdown-menu</code>的ul列表显示下拉菜单项</li>
+</ul>
+        
+          <a class="article-more-a" href="/2017/08/10/Bootstrap菜单、按钮和输入框/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bootstrap</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/10/Bootstrap菜单、按钮和输入框/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-清除浮动" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/07/清除浮动/">清除浮动</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/07/清除浮动/" class="archive-article-date">
+  	<time datetime="2017-08-07T13:30:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、在需要清除浮动的元素上</p>
+<pre><code>clear:both;
+</code></pre><p>2、父元素</p>
+<p>1&gt;</p>
+<pre><code>overflow:hidden;
+</code></pre><p>2&gt;</p>
+<pre><code>.clearfix {
+    overflow: auto;
+    zoom:1;
+}
+</code></pre><p>3&gt;</p>
+<pre><code>.clearfix {
+    overflow:auto;
+    _height:1%;
+}
+</code></pre><p>4&gt;</p>
+<pre><code>.clearfix:after { 
+     content: &quot;.&quot;; 
+     display: block;
+     height: 0;
+     clear: both;
+     visibility: hidden;
+}
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/07/清除浮动/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-Bootstrap图片，按钮和表格" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -655,139 +803,6 @@ justify-content:center;
 
 
   
-    <article id="post-container和container-fluid的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/31/container和container-fluid的区别/">container和container-fluid的区别</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/31/container和container-fluid的区别/" class="archive-article-date">
-  	<time datetime="2017-07-31T14:17:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>container的width是用媒体查询获得的动态固定尺寸。当屏幕窄时，宽度为100%。当屏幕变宽后，会随着宽度的不同而有着不同的margin值，居中显示。</p>
-<p>container-fluid的width始终是100％。</p>
-        
-          <a class="article-more-a" href="/2017/07/31/container和container-fluid的区别/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bootstrap</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/31/container和container-fluid的区别/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Bootstrap栅格系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/31/Bootstrap栅格系统/">Bootstrap栅格系统</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/31/Bootstrap栅格系统/" class="archive-article-date">
-  	<time datetime="2017-07-31T08:54:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="布局容器"><a href="#布局容器" class="headerlink" title="布局容器"></a>布局容器</h2><p><strong>.container</strong></p>
-<pre><code>&lt;!--固定宽度--&gt;
-&lt;div class=&quot;container&quot;&gt;
-    ...
-&lt;/div&gt;
-</code></pre><p><strong>.container-fluid</strong></p>
-<pre><code>&lt;!--100%宽度--&gt;
-&lt;div class=&quot;container-fluid&quot;&gt;
-  ...
-&lt;/div&gt;
-</code></pre>
-        
-          <a class="article-more-a" href="/2017/07/31/Bootstrap栅格系统/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bootstrap</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/31/Bootstrap栅格系统/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -892,10 +907,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
@@ -904,19 +915,19 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
+                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -925,6 +936,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">编程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
             
             <div class="clearfix"></div>
@@ -975,7 +990,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">你不明白&lt;br&gt;我没有学会爱自己&lt;br&gt;也没有学会爱别人</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">你不明白&lt;br&gt;我没有学会爱自己&lt;br&gt;也没有学会爱别人&lt;br&gt;似乎一眼就能看见贫瘠的未来</div>
   	  	
     	</section>
     
